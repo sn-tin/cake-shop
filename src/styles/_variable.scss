@@ -1,0 +1,22 @@
+/* Fonts */
+$headingFont: 'Playfair Display', serif;
+$bodyFont: 'Inter', sans-serif;
+
+/* Colors */
+$red: #BA4D4A;
+$cream: #FEFAF8;
+$gray: #797979;
+$dark-gray: #D9D9D9;
+$white: #FFFFFF;
+$black: #000000;
+$lines-color: #D6D6D6;
+$gradient: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%);
+
+/* Devices */
+$mobileS: 'min-width: 320px';
+$mobileM: 'min-width: 375px';
+$mobileL: 'min-width: 425px';
+$tablet: 'min-width: 768px';
+$laptop: 'min-width: 1024px';
+$laptopL: 'min-width: 1440px';
+$desktop: 'min-width: 2560px';
