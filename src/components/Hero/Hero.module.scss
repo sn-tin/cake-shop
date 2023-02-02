@@ -37,6 +37,9 @@
         border-radius: 100vmax;
         padding: 10px 8px;
     }
+    @media screen and (min-wdith: $laptop) {
+        padding: 0;
+    }
     @media screen and (min-width: $laptopL) {
         button {
             padding: 20px 10px;
