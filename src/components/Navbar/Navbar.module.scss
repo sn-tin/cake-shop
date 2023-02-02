@@ -16,7 +16,7 @@
     max-width: 1500px;
     padding: 12px;
     margin: auto;
-    @media screen and ($laptop) {
+    @media screen and (min-width: $laptop) {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -27,7 +27,7 @@
 
 .rightLinks {
     display: none;
-    @media screen and ($laptop) {
+    @media screen and (min-width: $laptop) {
         display: flex;
         gap: 27px;
         font-size: clamp(0.8rem, 2.5vw, 1rem);
@@ -39,12 +39,17 @@
     gap: 10px;
 }
 .logo {
-    width: 35px;
-    height: 35px;
-    border: 1px solid $red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 36px;
+	height: 36px;
+	border: 1px solid $red;
     border-radius: 100vmax;
-    svg {
+	margin-right: 7px;
+    i {
         color: $red;
+        font-size: 18px;
     }
 }
 .logoName {

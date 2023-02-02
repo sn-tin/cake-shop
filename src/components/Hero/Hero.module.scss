@@ -1,19 +1,19 @@
 @import '../../styles/variable';
 
 .hero {
-    margin-top: 50px;
     height: 100vh;
 }
 
 .heroWrapper {
     display: flex;
-    flex-direction: row;
+    flex-direction: column-reverse;
     justify-content: space-between;
     align-items: center;
+    gap: 40px;
     padding: 20px;
     h1 {
         width: 100%;
-        font-size: clamp(2.8rem, 4vw, 6rem);
+        font-size: clamp(2.8rem, 4vw, 5.5rem);
         font-weight: 500;
     }
     p {
@@ -31,7 +31,11 @@
         border-radius: 100vmax;
         padding: 10px 8px;
     }
-    @media screen and ($laptop) {
+    @media screen and (min-width: $laptop) {
+        flex-direction: row;
+        padding: 0 0 0 50px;
+    }
+    @media screen and (min-width: $laptopL) {
         padding: 0 0 0 250px;
         button {
             padding: 20px 10px;
@@ -40,25 +44,27 @@
 }
 
 .imageWrapper {
-    display: none;
     position: relative;
-    img {
-        display: none;
+    .gradientOverlay {
+        width: 100%;
+        height: 300px;
+        background-image: $gradient;
+        position: absolute;
+        bottom: 0;
+        right: 0;
     }
-    @media screen and ($laptop) {
+    @media screen and (min-width: $laptop) {
         display: block;
         img {
             display: block;
-            width: 900px;
-            height: 100%;
-        }
-        .gradientOverlay {
             width: 100%;
-            height: 300px;
-            background-image: $gradient;
-            position: absolute;
-            bottom: 0;
-            right: 0;
+            height: 100%;
+            margin-left: auto;
+        }
+    }
+    @media screen and (min-width: $laptopL) {
+        img {
+            width: 900px;
         }
     }
 }

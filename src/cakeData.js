@@ -1,8 +1,8 @@
-import crownPrincess from "../assets/vintage-1.jpeg";
-import veraBear from "../assets/vintage-2.jpeg";
-import romanceBear from "../assets/vintage-3.jpeg";
-import velvetGlow from "../assets/vintage-4.jpeg";
-import rubyDuby from "../assets/vintage-5.jpeg";
+import crownPrincess from "./assets/vintage-1.jpeg";
+import veraBear from "./assets/vintage-2.jpeg";
+import romanceBear from "./assets/vintage-3.jpeg";
+import velvetGlow from "./assets/vintage-4.jpeg";
+import rubyDuby from "./assets/vintage-5.jpeg";
 
 export const data = [
     {
@@ -52,3 +52,5 @@ export const data = [
         },
     },
 ]
+
+export default data

@@ -1,0 +1,48 @@
+@import '../../styles/variable';
+
+.cakesMenu {
+    width: 100%;
+    margin: auto;
+}
+.cakesWrapper {
+    width: 100%;
+    max-width: 1500px;
+    padding: 12px;
+    margin: auto;
+    text-align: center;
+    h2 {
+        font-size: clamp(2.2rem, 2.5vw, 2.5rem);
+    }
+    @media screen and (min-width: $laptop) {
+        padding: 10px 50px;
+    }
+}
+.cakeCategory {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    span {
+        font-size: clamp(0.85rem, 2.5vw, 1.25rem);
+        text-transform: capitalize;
+    }
+}
+.cakeImage {
+    width: 100%;
+    max-width: 460px;
+}
+.cakeDetails {
+    padding: 10px 0 0;
+    p {
+        text-align: left;
+        padding-top: 5px;
+    }
+}
+.cakeName {
+    text-transform: uppercase;
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+}
+.cakePrice {
+    font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+    font-weight: 600;
+}

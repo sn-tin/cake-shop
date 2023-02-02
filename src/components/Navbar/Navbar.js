@@ -12,7 +12,7 @@ const Navbar = () => {
                 </div>
                 <div className={styles.logoWrapper}>
                     <div className={styles.logo}>
-                        <i class="fa-solid fa-cake-candles"></i>
+                        <i className="fa-solid fa-cake-candles"></i>
                     </div>
                     <h1 className={styles.logoName}>Cake Shop</h1>
                 </div>
@@ -20,7 +20,7 @@ const Navbar = () => {
                     <div>Login</div>
                     <div>Register</div>
                     <div>
-                        <i class="fa-solid fa-cart-shopping"></i>
+                        <i className="fa-solid fa-cart-shopping"></i>
                     </div>
                 </div>
             </section>
