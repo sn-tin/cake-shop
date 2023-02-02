@@ -1,6 +1,8 @@
 import Navbar from './components/Navbar/Navbar';
 import Hero from './components/Hero/Hero';
 import CakeList from './components/Cakes/Cakes';
+import Cta from './components/Cta/Cta';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
@@ -8,6 +10,8 @@ function App() {
       <Navbar />
       <Hero />
       <CakeList />
+      <Cta />
+      <Footer />
     </>
   );
 }
