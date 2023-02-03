@@ -11,10 +11,10 @@ const Navbar = () => {
                     <div>Cakes</div>
                 </div>
                 <div className={styles.logoWrapper}>
-                    <div className={styles.logo}>
+                    <div className={styles.navLogo}>
                         <i className="fa-solid fa-cake-candles"></i>
                     </div>
-                    <h1 className={styles.logoName}>Cake Shop</h1>
+                    <h1 className={styles.navLogoName}>Cake Shop</h1>
                 </div>
                 <div className={styles.leftLinks}>
                     <div>Login</div>

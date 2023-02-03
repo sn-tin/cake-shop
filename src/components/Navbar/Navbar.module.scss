@@ -38,10 +38,10 @@
     align-items: center;
     gap: 10px;
 }
-.logo {
+.navLogo {
     @include logoIcon($color: $red);
 }
-.logoName {
+.navLogoName {
     @include logoName(1.3rem, 1.875rem, $red);
 }
 
