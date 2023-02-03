@@ -4,7 +4,6 @@ import data from "../../cakeData"
 import styles from "./Cakes.module.scss"
 
 const CakeList = () => {
-    const cakeCategory = ["All", "Wedding", "Vintage", "Monogram"];
     const [cakes, setCakes] = useState(data)
     const formatPrice = (value) => value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     return (
@@ -12,7 +11,10 @@ const CakeList = () => {
             <div className={styles.cakesWrapper}>
                 <h2>Our Cakes</h2>
                 <div className={styles.cakeCategory}>
-                    { cakeCategory.map(menu => <span key={menu}>{menu}</span>) }
+                    <span className={styles.cakeCategoryActive}>All</span>
+                    <span className={styles.cakeCategoryActive}>Wedding</span>
+                    <span className={styles.cakeCategoryActive}>Vintage</span>
+                    <span className={styles.cakeCategoryActive}>Monogram</span>
                 </div>
                 <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 1, md: 3 }}>
                     { cakes.map(data => (
