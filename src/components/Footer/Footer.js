@@ -1,33 +1,33 @@
 import React from 'react';
-import styles from '../Navbar/Navbar.module.scss';
+import styles from '../Footer/Footer.module.scss';
 
 const Footer = () => {
   return (
-    <footer>
-        <section>
-            <div>
-                <h1>
-                    <div className={styles.logo}>
+    <footer className={styles.footer}>
+        <section className={styles.footerWrapper}>
+            <div className={styles.footerContent}>
+                <h1 className={styles.footerLogoName}>
+                    <div className={styles.footerLogoIcon}>
                         <i className="fa-solid fa-cake-candles"></i>
                     </div>
                     Cake Shop
                 </h1>
-                <div>
-                    <i class="fa-brands fa-square-instagram"></i>
-                    <i class="fa-brands fa-square-facebook"></i>
-                    <i class="fa-brands fa-blogger"></i>
+                <div className={styles.socialLinks}>
+                    <i class="fa-brands fa-square-instagram fa-2xl"></i>
+                    <i class="fa-brands fa-square-facebook fa-2xl"></i>
+                    <i class="fa-brands fa-blogger fa-2xl"></i>
                 </div>
             </div>
-            <div>
+            <div className={styles.footerContent}>
                 <h3>Contact Us</h3>
                 <div>
-                    <p>957 Roberts Dr Elgin, South Carolina(SC), 29045</p>
-                    <p>401-102-7063</p>
-                    <p>example@gmail.com</p>
-                    <p>Operating Hours:<br/>Mon - Sun 10:30am - 6pm<br/>Tuesday: Closed</p>
+                    <p>Cake Shop, 9th St,<br/>Bacoor, 4102 Cavite</p>
+                    <p>8123-4567</p>
+                    <p>cakeshop@gmail.com</p>
+                    <p><strong>Operating Hours:</strong><br/>Mon - Sun 10:30am - 6pm<br/>Tuesday: Closed</p>
                 </div>
             </div>
-            <div>
+            <div className={styles.footerContent}>
                 <h3>Quick Links</h3>
                 <div>
                     <p>About Us</p>
@@ -36,7 +36,7 @@ const Footer = () => {
                     <p>Terms & Conditions</p>
                 </div>
             </div>
-            <div>
+            <div className={styles.footerContent}>
                 <h3>Resources</h3>
                 <div>
                     <p>Help Center</p>
@@ -44,8 +44,6 @@ const Footer = () => {
                     <p>Directory</p>
                 </div>
             </div>
-            <small>Copyright © 2023 by Cake Shop, Inc, All rights reserved.</small>
-            <div>Design and Developed by Krsitine de Jesus</div>
         </section>
     </footer>
   )
