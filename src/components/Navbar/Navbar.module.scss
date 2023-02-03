@@ -39,22 +39,10 @@
     gap: 10px;
 }
 .logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 36px;
-	height: 36px;
-	border: 1px solid $red;
-    border-radius: 100vmax;
-	margin-right: 7px;
-    i {
-        color: $red;
-        font-size: 18px;
-    }
+    @include logoIcon($color: $red);
 }
 .logoName {
-    font-size: clamp(1.3rem, 2.5vw, 1.875rem);
-    color: $red;
+    @include logoName(1.3rem, 1.875rem, $red);
 }
 
 .leftLinks {

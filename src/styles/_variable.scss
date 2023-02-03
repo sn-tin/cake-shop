@@ -20,3 +20,23 @@ $tablet: '768px';
 $laptop: '1024px';
 $laptopL: '1440px';
 $desktop: '2560px';
+
+@mixin logoIcon($w: 36px, $h: 36px, $color) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: $w;
+    height: $h;
+    border: 1px solid $color;
+    border-radius: 100vmax;
+    margin-right: 7px;
+    i {
+        color: $color;
+        font-size: 18px;
+    }
+}
+
+@mixin logoName($s, $l, $color) {
+    font-size: clamp($s, 2.5vw, $l);
+    color: $color;
+}
