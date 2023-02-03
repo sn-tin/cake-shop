@@ -11,8 +11,14 @@
         font-weight: 500;
         font-size: clamp(1.2rem, 2.5vw, 1.5rem);
     }
-    p:not(:last-of-type) {
+    p {
+        cursor: pointer;
+        &:hover {
+            color: $red;
+        }
+        &:not(:last-of-type) {
         margin-bottom: 20px;
+        }
     }
 }
 .footerWrapper {
@@ -42,8 +48,10 @@
     align-items: center;
 }
 .socialLinks {
-    color: $red;
-    i:not(:last-of-type) {
+    a, a:visited, a:hover, a:active {
+        color: $red;
+    }
+    a:not(:last-of-type) {
         margin-right: 33px;
     }
 }
