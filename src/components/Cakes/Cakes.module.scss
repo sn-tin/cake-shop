@@ -22,9 +22,16 @@
     justify-content: center;
     align-items: center;
     gap: 15px;
+    margin: 30px auto;
+    padding-bottom: 20px;
+    border-bottom: 1px solid $lines-color;
     span {
         font-size: clamp(0.85rem, 2.5vw, 1.25rem);
         text-transform: capitalize;
+    }
+    @media screen and (min-width: $laptop) {
+        gap: 51px;
+        margin: 40px auto;
     }
 }
 .cakeImage {
