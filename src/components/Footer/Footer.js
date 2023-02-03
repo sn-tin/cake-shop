@@ -13,9 +13,9 @@ const Footer = () => {
                     Cake Shop
                 </h1>
                 <div className={styles.socialLinks}>
-                    <i class="fa-brands fa-square-instagram fa-2xl"></i>
-                    <i class="fa-brands fa-square-facebook fa-2xl"></i>
-                    <i class="fa-brands fa-blogger fa-2xl"></i>
+                    <a href="https://www.instagram.com/" target="_blank" rel="noreferrer"><i class="fa-brands fa-square-instagram fa-2xl"></i></a>
+                    <a href="https://www.facebook.com/" target="_blank" rel="noreferrer"><i class="fa-brands fa-square-facebook fa-2xl"></i></a>
+                    <a href="https://www.blogger.com/" target="_blank" rel="noreferrer"><i class="fa-brands fa-blogger fa-2xl"></i></a>
                 </div>
             </div>
             <div className={styles.footerContent}>
