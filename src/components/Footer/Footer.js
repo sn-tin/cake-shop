@@ -27,7 +27,7 @@ const Footer = () => {
                     <p><strong>Operating Hours:</strong><br/>Mon - Sun 10:30am - 6pm<br/>Tuesday: Closed</p>
                 </div>
             </div>
-            <div className={styles.footerContent}>
+            <div className={styles.footerContentLinks}>
                 <h3>Quick Links</h3>
                 <div>
                     <p>About Us</p>
@@ -36,7 +36,7 @@ const Footer = () => {
                     <p>Terms & Conditions</p>
                 </div>
             </div>
-            <div className={styles.footerContent}>
+            <div className={styles.footerContentLinks}>
                 <h3>Resources</h3>
                 <div>
                     <p>Help Center</p>

@@ -11,15 +11,6 @@
         font-weight: 500;
         font-size: clamp(1.2rem, 2.5vw, 1.5rem);
     }
-    p {
-        cursor: pointer;
-        &:hover {
-            color: $red;
-        }
-        &:not(:last-of-type) {
-        margin-bottom: 20px;
-        }
-    }
 }
 .footerWrapper {
     width: 100%;
@@ -29,13 +20,27 @@
     justify-content: space-between;
     align-items: start;
     padding: 0 20px;
-    @media screen and (min-width: $laptop) {
+    @media screen and (min-width: $tablet) {
         flex-direction: row;
         padding: 0 50px;
     }
 }
 .footerContent {
     margin-bottom: 35px;
+    p {
+        &:not(:last-of-type) {
+            margin-bottom: 20px;
+        }
+    }
+}
+.footerContentLinks {
+    @extend .footerContent;
+    p {
+        cursor: pointer;
+        &:hover {
+            color: $red;
+        }
+    }
 }
 .footerLogoIcon {
     @include logoIcon($color: $black);
