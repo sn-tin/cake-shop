@@ -10,7 +10,6 @@ const CakeList = () => {
     const [cakeCategory, setcakeCategory] = useState("All");
     const handleCakecCategory = (e) => {
         setcakeCategory(e.target.innerText)
-        console.log(cakeCategory)
     }
     /* Filter Cakes */ 
     const filterCake = () => {
@@ -31,7 +30,7 @@ const CakeList = () => {
             <div className={styles.cakesWrapper}>
                 <h2>Our Cakes</h2>
                 <div className={styles.cakeCategory}>
-                    { categoryList.map(({category, index}) =>  <span key={index} className={styles.cakeCategoryActive} onClick={handleCakecCategory}>{category}</span> ) }
+                    { categoryList.map((category, index) =>  <span key={index} className={styles.cakeCategoryActive} onClick={handleCakecCategory}>{category}</span> ) }
                 </div>
                 <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 1, md: 3 }}>
                     { cakes.map(data => (
