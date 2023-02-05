@@ -1,20 +1,37 @@
 import { Grid } from "@mui/material"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import data from "../../cakeData"
 import styles from "./Cakes.module.scss"
 
 const CakeList = () => {
-    const [cakes, setCakes] = useState(data)
+    const [cakes, setCakes] = useState(data);
+    /* Cake Category*/ 
+    const categoryList = ["All", "Wedding", "Vintage", "Monogram"]
+    const [cakeCategory, setcakeCategory] = useState("All");
+    const handleCakecCategory = (e) => {
+        setcakeCategory(e.target.innerText)
+        console.log(cakeCategory)
+    }
+    /* Filter Cakes */ 
+    const filterCake = () => {
+        if(cakeCategory === "All") {
+            setCakes(data)
+        } else {
+            setCakes(data.filter(cake => cake.category.includes(cakeCategory.toLowerCase())))
+        }
+    }
+
+    useEffect(() => {
+        filterCake()
+    }, [cakeCategory])
+
     const formatPrice = (value) => value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     return (
         <section className={styles.cakesMenu}>
             <div className={styles.cakesWrapper}>
                 <h2>Our Cakes</h2>
                 <div className={styles.cakeCategory}>
-                    <span className={styles.cakeCategoryActive}>All</span>
-                    <span className={styles.cakeCategoryActive}>Wedding</span>
-                    <span className={styles.cakeCategoryActive}>Vintage</span>
-                    <span className={styles.cakeCategoryActive}>Monogram</span>
+                    { categoryList.map(category =>  <span key={category} className={styles.cakeCategoryActive} onClick={handleCakecCategory}>{category}</span> ) }
                 </div>
                 <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 1, md: 3 }}>
                     { cakes.map(data => (
