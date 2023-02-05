@@ -10,6 +10,7 @@
     padding: 12px;
     margin: 80px auto;
     text-align: center;
+    position: relative;
     h2 {
         font-size: clamp(2.2rem, 2.5vw, 2.5rem);
     }
@@ -25,20 +26,35 @@
     gap: 25px;
     margin: 30px auto;
     padding-bottom: 20px;
-    border-bottom: 1px solid $lines-color;
+    // border-bottom: 1px solid $lines-color;
     span {
         font-size: clamp(0.85rem, 2.5vw, 1.25rem);
         text-transform: capitalize;
         text-align: center;
+        padding-bottom: 20px;
+        border-bottom: 3px solid transparent;
     }
     @media screen and (min-width: $laptop) {
         gap: 51px;
         margin: 40px auto;
     }
 }
-.activeCategory {
+span.activeCategory {
     color: $red;
     font-weight: 800;
+    border-bottom: 3px solid $red;
+    transition: 0.2s ease-in;
+    z-index: 1;
+}
+.dividerLine {
+    width: 100%;
+    height: 1px;
+    background-color: $lines-color;
+    position: relative;
+    bottom: 51px;
+    @media screen and (min-width: $laptop) {
+        bottom: 61px;
+    }
 }
 .cakeImage {
     width: 100%;

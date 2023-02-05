@@ -32,6 +32,7 @@ const CakeList = () => {
                 <div className={styles.cakeCategory}>
                     { categoryList.map((category, index) =>  <span key={index} className={cakeCategory === category ? `${styles.activeCategory}` : null } onClick={handleCakecCategory}>{category}</span> ) }
                 </div>
+                <div className={styles.dividerLine}><div></div></div>
                 <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 1, md: 3 }}>
                     { cakes.map(data => (
                         <Grid item xs={6} md={4} mb={5}>
