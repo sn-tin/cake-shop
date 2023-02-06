@@ -5,7 +5,6 @@ const Navbar = () => {
         <nav className={styles.navbar}>
             <section className={styles.navWrapper}>
                 <div className={styles.rightLinks}>
-                    <div>Home</div>
                     <div>About</div>
                     <div>Contact</div>
                     <div>Cakes</div>
