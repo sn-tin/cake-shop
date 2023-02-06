@@ -20,7 +20,7 @@
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        padding: 10px 50px;
+        padding: 20px 50px;
     }
 }
 
@@ -49,4 +49,21 @@
     :is(:nth-child(2)) {
         font-weight: 600;
     }
+}
+.cart {
+    position: relative;
+}
+.cartCounter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $white;
+    font-weight: 600;
+    width: 25px;
+    height: 25px;
+    background-color: $red;
+    border-radius: 100vmax;
+    position: absolute;
+    left: 20px;
+    bottom: 12px;
 }

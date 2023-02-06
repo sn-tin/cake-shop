@@ -19,8 +19,9 @@ const Navbar = () => {
                 <div className={styles.leftLinks}>
                     <div>Login</div>
                     <div>Register</div>
-                    <div>
-                        <i className="fa-solid fa-cart-shopping"></i>
+                    <div className={styles.cart}>
+                        <i className="fa-solid fa-cart-shopping fa-2xl"></i>
+                        <div className={styles.cartCounter}>0</div>
                     </div>
                 </div>
             </section>
