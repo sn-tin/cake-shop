@@ -1,9 +1,9 @@
-import crownPrincess1 from ".assets/crown-princess-1.jpeg";
-import crownPrincess2 from ".assets/crown-princess-2.jpeg";
+import crownPrincess1 from "./assets/crown-princess-1.jpeg";
+import crownPrincess2 from "./assets/crown-princess-2.jpeg";
 import veraBear1 from "./assets/vera-bear-1.jpeg";
 import veraBear2 from "./assets/vera-bear-2.jpeg";
-import romanceBear1 from "./assets/romance-bear-1.jpeg";
-import romanceBear2 from "./assets/romance-bear-2.jpeg";
+import romanceBerry1 from "./assets/romance-berry-1.jpeg";
+import romanceBerry2 from "./assets/romance-berry-2.jpeg";
 import velvetGlow1 from "./assets/velvet-glow-1.jpeg";
 import velvetGlow2 from "./assets/velvet-glow-2.jpeg";
 import rubyDuby1 from "./assets/ruby-duby-1.jpeg";
@@ -26,7 +26,6 @@ import floral1 from "./assets/floral-mono-1.jpeg";
 import floral2 from "./assets/floral-mono-2.jpeg";
 import oceans1 from "./assets/oceans-mono-1.jpeg";
 import oceans2 from "./assets/oceans-mono-2.jpeg";
-
 
 export const data = [
     {
@@ -57,7 +56,7 @@ export const data = [
         cakeName: "Romance Bear",
         slug: "romance-bear",
         category: "vintage",
-        images: [romanceBear1, romanceBear2],
+        images: [romanceBerry1, romanceBerry2],
         details: {
             price: "1500",
             description: "",

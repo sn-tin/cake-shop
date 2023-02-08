@@ -39,7 +39,7 @@ const CakeList = () => {
                     { cakes.map(cake => (
                         <Grid item xs={6} md={4} mb={5}>
                             <Link to={`/cakes/${cake.slug}`} className={styles.cardLink}>
-                                <img className={styles.cakeImage} src={cake.imgSrc} alt={cake.cakeName} />
+                                <img className={styles.cakeImage} src={cake.images[0]} alt={cake.cakeName} />
                                 <div className={styles.cakeDetails}>
                                     <p className={styles.cakeName}>{cake.cakeName}</p>
                                     <p className={styles.cakePrice}>Php {formatPrice(cake.details.price)}.00</p>
