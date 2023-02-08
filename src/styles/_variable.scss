@@ -40,3 +40,18 @@ $desktop: '2560px';
     font-size: clamp($s, 2.5vw, $l);
     color: $color;
 }
+
+@mixin buttons ($bgColor) {
+    width: 180px;
+    color: $white;
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    text-transform: uppercase;
+    background-color: $bgColor;
+    border: 0;
+    padding: 10px 8px;
+    @if $bgColor == $red {
+        color: $white
+    } @else {
+        color: $black;
+    }
+}

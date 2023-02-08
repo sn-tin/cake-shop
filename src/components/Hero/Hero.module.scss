@@ -28,13 +28,7 @@
         margin: 28px 0;
     }
     button {
-        width: 180px;
-        color: $white;
-        font-size: clamp(1rem, 2.5vw, 1.2rem);
-        text-transform: uppercase;
-        background-color: $red;
-        border: 0;
-        padding: 10px 8px;
+        @include buttons($red);
     }
     @media screen and (min-wdith: $laptop) {
         padding: 0;

@@ -13,17 +13,63 @@
 .navWrapper {
     width: 100%;
     max-width: 1500px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     padding: 12px;
     margin: auto;
     @media screen and (min-width: $laptop) {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
         padding: 20px 50px;
     }
 }
-
+.navMenu {
+    width: 25px;
+    height: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 7px;
+    position: relative;
+    span {
+        width: 25px;
+        height: 2px;
+        background-color: $black;
+    }
+    .navMenuList {
+        position: absolute;
+        background-color: $white;
+    }
+    @media screen and (min-width: $laptop) {
+        display: none;
+    }
+}
+.navMenuList {
+    display: none;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    padding: 50px 20px;
+    position: absolute;
+    left: 0;
+    top: 60px;
+    background-color: $white;
+    div {
+        margin-bottom: 20px;
+        &:is(:last-of-type) {
+            font-weight: 800;
+        }
+    }
+    button {
+        width: 100%;
+        @include buttons($red);
+        text-transform: capitalize;
+        font-weight: 800;
+    }
+    @media screen and (min-width: $laptop) {
+        display: none;
+    }
+}
 .rightLinks {
     display: none;
     @media screen and (min-width: $laptop) {
@@ -45,9 +91,19 @@
 }
 
 .leftLinks {
-    @extend .rightLinks;
-    :is(:nth-child(2)) {
-        font-weight: 600;
+    .login, .register {
+        display: none;
+    }
+    @media screen and (min-width: $laptop) {
+        display: flex;
+        gap: 27px;
+        font-size: clamp(0.8rem, 2.5vw, 1rem);
+        .login, .register {
+            display: flex;
+        }
+        .register {
+            font-weight: 600;
+        }
     }
 }
 .cart {
@@ -59,11 +115,19 @@
     justify-content: center;
     color: $white;
     font-weight: 600;
-    width: 25px;
-    height: 25px;
+    width: 20px;
+    height: 20px;
+    font-size: 0.5rem;
     background-color: $red;
     border-radius: 100vmax;
     position: absolute;
-    left: 20px;
-    bottom: 12px;
+    left: 12px;
+    bottom: 11px;
+    @media screen and (min-width: $laptop) {
+        width: 25px;
+        height: 25px;
+        font-size: 0.7rem;
+        left: 15px;
+        bottom: 10px;
+    }
 }
