@@ -36,7 +36,11 @@ export const data = [
         images: [crownPrincess1, crownPrincess2],
         details: {
             price: "1500",
-            description: "",
+            description: [
+                "Classic, simple, clean but nothing short of elegance and grace.", 
+                "Vintage cakes are all handpipped lace by lace, piece by piece made to into a masterpiece.",
+                "Cake comes with wooden ' Happy Birthday ' topper, sparkling candle and firework candle.",
+            ],
         },
 
     },
@@ -48,7 +52,11 @@ export const data = [
         images: [veraBear1, veraBear2],
         details: {
             price: "1500",
-            description: "",
+            description: [
+                "Classic, simple, clean but nothing short of elegance and grace.", 
+                "Vintage cakes are all handpipped lace by lace, piece by piece made to into a masterpiece.",
+                "Cake comes with wooden ' Happy Birthday ' topper, sparkling candle and firework candle.",
+            ],
         },
     },
     {
@@ -59,7 +67,11 @@ export const data = [
         images: [romanceBerry1, romanceBerry2],
         details: {
             price: "1500",
-            description: "",
+            description: [
+                "Classic, simple, clean but nothing short of elegance and grace.", 
+                "Vintage cakes are all handpipped lace by lace, piece by piece made to into a masterpiece.",
+                "Cake comes with wooden ' Happy Birthday ' topper, sparkling candle and firework candle.",
+            ],
         },
     },
     {
@@ -70,7 +82,11 @@ export const data = [
         images: [velvetGlow1, velvetGlow2],
         details: {
             price: "1700",
-            description: "",
+            description: [
+                "Classic, simple, clean but nothing short of elegance and grace.", 
+                "Vintage cakes are all handpipped lace by lace, piece by piece made to into a masterpiece.",
+                "Cake comes with wooden ' Happy Birthday ' topper, sparkling candle and firework candle.",
+            ],
         },
     },
     {
@@ -81,7 +97,11 @@ export const data = [
         images: [rubyDuby1, rubyDuby2],
         details: {
             price: "1700",
-            description: "",
+            description: [
+                "Classic, simple, clean but nothing short of elegance and grace.", 
+                "Vintage cakes are all handpipped lace by lace, piece by piece made to into a masterpiece.",
+                "Cake comes with wooden ' Happy Birthday ' topper, sparkling candle and firework candle.",
+            ],
         },
     },
     {
@@ -92,7 +112,11 @@ export const data = [
         images: [pearl1, pearl2],
         details: {
             price: "1700",
-            description: "",
+            description: [
+                "Cheers to the lovely couple, let's celebrate love with a breathtaking cake!",
+                "These bespoke cakes are suitable for a ROM, Wedding ceremony or even just a fancy party,",
+                "Comes with sparkling candle and firework candle",
+            ],
         },
     },
     {
@@ -103,7 +127,11 @@ export const data = [
         images: [firstLove1, firstLove2],
         details: {
             price: "1700",
-            description: "",
+            description: [
+                "Cheers to the lovely couple, let's celebrate love with a breathtaking cake!",
+                "These bespoke cakes are suitable for a ROM, Wedding ceremony or even just a fancy party,",
+                "Comes with sparkling candle and firework candle",
+            ],
         },
     },
     {
@@ -114,7 +142,11 @@ export const data = [
         images: [adore1, adore2],
         details: {
             price: "1700",
-            description: "",
+            description: [
+                "Cheers to the lovely couple, let's celebrate love with a breathtaking cake!",
+                "These bespoke cakes are suitable for a ROM, Wedding ceremony or even just a fancy party,",
+                "Comes with sparkling candle and firework candle",
+            ],
         },
     },
     {
@@ -125,7 +157,11 @@ export const data = [
         images: [woaini1, woaini2],
         details: {
             price: "1700",
-            description: "",
+            description: [
+                "Cheers to the lovely couple, let's celebrate love with a breathtaking cake!",
+                "These bespoke cakes are suitable for a ROM, Wedding ceremony or even just a fancy party,",
+                "Comes with sparkling candle and firework candle",
+            ],
         },
     },
     {
@@ -136,7 +172,11 @@ export const data = [
         images: [devoted1, devoted2],
         details: {
             price: "1700",
-            description: "",
+            description: [
+                "Cheers to the lovely couple, let's celebrate love with a breathtaking cake!",
+                "These bespoke cakes are suitable for a ROM, Wedding ceremony or even just a fancy party,",
+                "Comes with sparkling candle and firework candle",
+            ],
         },
     },
     {
@@ -147,7 +187,11 @@ export const data = [
         images: [everlasting1, everlasting2],
         details: {
             price: "1700",
-            description: "",
+            description: [
+                "Cheers to the lovely couple, let's celebrate love with a breathtaking cake!",
+                "These bespoke cakes are suitable for a ROM, Wedding ceremony or even just a fancy party,",
+                "Comes with sparkling candle and firework candle",
+            ],
         },
     },
     {
@@ -158,7 +202,11 @@ export const data = [
         images: [minis1, minis2],
         details: {
             price: "1700",
-            description: "",
+            description: [
+                "This monogram cake will be best for a small, but nonetheless special celebration!",
+                "Ideal for anyone looking for a monogram cake with 2 mini letters/numbers.",
+                "Comes with sparkling candle and firework candle.",
+            ],
         },
     },
     {
@@ -169,7 +217,11 @@ export const data = [
         images: [floral1, floral2],
         details: {
             price: "1700",
-            description: "",
+            description: [
+                "This monogram cake will be best for a small, but nonetheless special celebration!",
+                "Ideal for anyone looking for a monogram cake with 2 mini letters/numbers.",
+                "Comes with sparkling candle and firework candle.",
+            ],
         },
     },
     {
@@ -180,7 +232,11 @@ export const data = [
         images: [oceans1, oceans2],
         details: {
             price: "1700",
-            description: "",
+            description: [
+                "This monogram cake will be best for a small, but nonetheless special celebration!",
+                "Ideal for anyone looking for a monogram cake with 2 mini letters/numbers.",
+                "Comes with sparkling candle and firework candle.",
+            ],
         },
     },
 ]
