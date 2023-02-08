@@ -16,6 +16,7 @@ import ocean from "./assets/monogram-1.jpeg";
 export const data = [
     {
         cakeName: "Crown Princess",
+        slug: "crown-princess",
         category: "vintage",
         imgSrc: crownPrincess,
         details: {
@@ -26,6 +27,7 @@ export const data = [
     },
     {
         cakeName: "Vera Bear",
+        slug: "vera-bear",
         category: "vintage",
         imgSrc: veraBear,
         details: {
@@ -35,6 +37,7 @@ export const data = [
     },
     {
         cakeName: "Romance Bear",
+        slug: "romance-bear",
         category: "vintage",
         imgSrc: romanceBear,
         details: {
@@ -44,6 +47,7 @@ export const data = [
     },
     {
         cakeName: "Velvet Glow",
+        slug: "velvet-glow",
         category: "vintage",
         imgSrc: velvetGlow,
         details: {
@@ -53,6 +57,7 @@ export const data = [
     },
     {
         cakeName: "Ruby Duby",
+        slug: "ruby-duby",
         category: "vintage",
         imgSrc: rubyDuby,
         details: {
@@ -62,6 +67,7 @@ export const data = [
     },
     {
         cakeName: "Pearl",
+        slug: "pearl",
         category: "wedding",
         imgSrc: pearl,
         details: {
@@ -71,6 +77,7 @@ export const data = [
     },
     {
         cakeName: "First Love",
+        slug: "first-love",
         category: "wedding",
         imgSrc: firstLove,
         details: {
@@ -80,6 +87,7 @@ export const data = [
     },
     {
         cakeName: "Adore",
+        slug: "adore",
         category: "wedding",
         imgSrc: adore,
         details: {
@@ -89,6 +97,7 @@ export const data = [
     },
     {
         cakeName: "Wo Ai Ni",
+        slug: "wo-ai-ni",
         category: "wedding",
         imgSrc: woaini,
         details: {
@@ -98,6 +107,7 @@ export const data = [
     },
     {
         cakeName: "Devoted",
+        slug: "devoted",
         category: "wedding",
         imgSrc: devoted,
         details: {
@@ -107,6 +117,7 @@ export const data = [
     },
     {
         cakeName: "Everlasting",
+        slug: "everlasting",
         category: "wedding",
         imgSrc: everlasting,
         details: {
@@ -116,6 +127,7 @@ export const data = [
     },
     {
         cakeName: "Minis Monogram Cookie",
+        slug: "minis-monogram-cookie",
         category: "monogram",
         imgSrc: minis,
         details: {
@@ -125,6 +137,7 @@ export const data = [
     },
     {
         cakeName: "Floral Monogram Cookie",
+        slug: "floral-monogram-cookie",
         category: "monogram",
         imgSrc: floral,
         details: {
@@ -134,6 +147,7 @@ export const data = [
     },
     {
         cakeName: "Ocean Pastels Monogram",
+        slug: "ocean-pastels-monogram",
         category: "monogram",
         imgSrc: ocean,
         details: {

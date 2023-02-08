@@ -1,8 +1,9 @@
 import Navbar from './components/Navbar/Navbar';
 import Cta from './components/Cta/Cta';
 import Footer from './components/Footer/Footer';
-import { BrowserRouter, Router, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import LandingPage from './components/LandingPage';
+import CakeDetails from './components/Cakes/CakeDetails';
 
 function App() {
   return (
@@ -10,8 +11,8 @@ function App() {
       <BrowserRouter>
         <Navbar />
         <Routes>
-          <Router path='/' element={<LandingPage />}></Router>
-          <Router path='/cakes/:slug'></Router>
+          <Route path='/' element={<LandingPage />}></Route>
+          <Route path='/cakes/:slug' element={<CakeDetails />}></Route>
         </Routes>
         <Cta />
         <Footer />

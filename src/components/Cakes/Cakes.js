@@ -1,5 +1,6 @@
 import { Grid } from "@mui/material"
 import { useEffect, useState } from "react"
+import { Link } from "react-router-dom"
 import data from "../../cakeData"
 import styles from "./Cakes.module.scss"
 
@@ -22,6 +23,7 @@ const CakeList = () => {
 
     useEffect(() => {
         filterCake()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [cakeCategory])
 
     const formatPrice = (value) => value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
@@ -34,13 +36,15 @@ const CakeList = () => {
                 </div>
                 <div className={styles.dividerLine}><div></div></div>
                 <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 1, md: 3 }}>
-                    { cakes.map(data => (
+                    { cakes.map(cake => (
                         <Grid item xs={6} md={4} mb={5}>
-                            <img className={styles.cakeImage} src={data.imgSrc} alt={data.cakeName} />
-                            <div className={styles.cakeDetails}>
-                                <p className={styles.cakeName}>{data.cakeName}</p>
-                                <p className={styles.cakePrice}>Php {formatPrice(data.details.price)}.00</p>
-                            </div>
+                            <Link to={`/cakes/${cake.slug}`} className={styles.cardLink}>
+                                <img className={styles.cakeImage} src={cake.imgSrc} alt={cake.cakeName} />
+                                <div className={styles.cakeDetails}>
+                                    <p className={styles.cakeName}>{cake.cakeName}</p>
+                                    <p className={styles.cakePrice}>Php {formatPrice(cake.details.price)}.00</p>
+                                </div>
+                            </Link>
                         </Grid>
                     )) }
                 </Grid>

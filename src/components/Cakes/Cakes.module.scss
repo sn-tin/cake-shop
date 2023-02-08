@@ -56,6 +56,9 @@ span.activeCategory {
         bottom: 61px;
     }
 }
+.cardLink {
+    text-decoration: none;
+}
 .cakeImage {
     width: 100%;
     max-width: 460px;
@@ -63,6 +66,7 @@ span.activeCategory {
 .cakeDetails {
     padding: 10px 0 0;
     p {
+        color: $black;
         text-align: left;
         padding-top: 5px;
     }
