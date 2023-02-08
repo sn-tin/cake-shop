@@ -6,7 +6,7 @@
     justify-content: space-between;
     align-items: center;
     gap: 40px;
-    @media screen and (min-width: $laptop) {
+    @media screen and (min-width: $tablet) {
         flex-direction: row;
         padding: 0 0 0 50px;
     }
