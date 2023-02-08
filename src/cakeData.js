@@ -1,17 +1,32 @@
-import crownPrincess from "./assets/vintage-1.jpeg";
-import veraBear from "./assets/vintage-2.jpeg";
-import romanceBear from "./assets/vintage-3.jpeg";
-import velvetGlow from "./assets/vintage-4.jpeg";
-import rubyDuby from "./assets/vintage-5.jpeg";
-import pearl from "./assets/wedding-1.jpeg";
-import firstLove from "./assets/wedding-2.jpeg";
-import adore from "./assets/wedding-3.jpeg";
-import woaini from "./assets/wedding-4.jpeg";
-import devoted from "./assets/wedding-5.jpeg";
-import everlasting from "./assets/wedding-6.jpeg";
-import minis from "./assets/monogram-1.jpeg";
-import floral from "./assets/monogram-2.jpeg";
-import ocean from "./assets/monogram-1.jpeg";
+import crownPrincess1 from ".assets/crown-princess-1.jpeg";
+import crownPrincess2 from ".assets/crown-princess-2.jpeg";
+import veraBear1 from "./assets/vera-bear-1.jpeg";
+import veraBear2 from "./assets/vera-bear-2.jpeg";
+import romanceBear1 from "./assets/romance-bear-1.jpeg";
+import romanceBear2 from "./assets/romance-bear-2.jpeg";
+import velvetGlow1 from "./assets/velvet-glow-1.jpeg";
+import velvetGlow2 from "./assets/velvet-glow-2.jpeg";
+import rubyDuby1 from "./assets/ruby-duby-1.jpeg";
+import rubyDuby2 from "./assets/ruby-duby-2.jpeg";
+import pearl1 from "./assets/pearl-1.jpeg";
+import pearl2 from "./assets/pearl-2.jpeg";
+import firstLove1 from "./assets/first-love-1.jpeg";
+import firstLove2 from "./assets/first-love-2.jpeg";
+import adore1 from "./assets/adore-1.jpeg";
+import adore2 from "./assets/adore-2.jpeg";
+import woaini1 from "./assets/woaini-1.jpeg";
+import woaini2 from "./assets/woaini-2.jpeg";
+import devoted1 from "./assets/devoted-1.jpeg";
+import devoted2 from "./assets/devoted-2.jpeg";
+import everlasting1 from "./assets/everlasting-1.jpeg";
+import everlasting2 from "./assets/everlasting-2.jpeg";
+import minis1 from "./assets/minis-mono-1.jpeg";
+import minis2 from "./assets/minis-mono-2.jpeg";
+import floral1 from "./assets/floral-mono-1.jpeg";
+import floral2 from "./assets/floral-mono-2.jpeg";
+import oceans1 from "./assets/oceans-mono-1.jpeg";
+import oceans2 from "./assets/oceans-mono-2.jpeg";
+
 
 export const data = [
     {
@@ -19,7 +34,7 @@ export const data = [
         cakeName: "Crown Princess",
         slug: "crown-princess",
         category: "vintage",
-        imgSrc: crownPrincess,
+        images: [crownPrincess1, crownPrincess2],
         details: {
             price: "1500",
             description: "",
@@ -31,7 +46,7 @@ export const data = [
         cakeName: "Vera Bear",
         slug: "vera-bear",
         category: "vintage",
-        imgSrc: veraBear,
+        images: [veraBear1, veraBear2],
         details: {
             price: "1500",
             description: "",
@@ -42,7 +57,7 @@ export const data = [
         cakeName: "Romance Bear",
         slug: "romance-bear",
         category: "vintage",
-        imgSrc: romanceBear,
+        images: [romanceBear1, romanceBear2],
         details: {
             price: "1500",
             description: "",
@@ -53,7 +68,7 @@ export const data = [
         cakeName: "Velvet Glow",
         slug: "velvet-glow",
         category: "vintage",
-        imgSrc: velvetGlow,
+        images: [velvetGlow1, velvetGlow2],
         details: {
             price: "1700",
             description: "",
@@ -64,7 +79,7 @@ export const data = [
         cakeName: "Ruby Duby",
         slug: "ruby-duby",
         category: "vintage",
-        imgSrc: rubyDuby,
+        images: [rubyDuby1, rubyDuby2],
         details: {
             price: "1700",
             description: "",
@@ -75,7 +90,7 @@ export const data = [
         cakeName: "Pearl",
         slug: "pearl",
         category: "wedding",
-        imgSrc: pearl,
+        images: [pearl1, pearl2],
         details: {
             price: "1700",
             description: "",
@@ -86,7 +101,7 @@ export const data = [
         cakeName: "First Love",
         slug: "first-love",
         category: "wedding",
-        imgSrc: firstLove,
+        images: [firstLove1, firstLove2],
         details: {
             price: "1700",
             description: "",
@@ -97,7 +112,7 @@ export const data = [
         cakeName: "Adore",
         slug: "adore",
         category: "wedding",
-        imgSrc: adore,
+        images: [adore1, adore2],
         details: {
             price: "1700",
             description: "",
@@ -108,7 +123,7 @@ export const data = [
         cakeName: "Wo Ai Ni",
         slug: "wo-ai-ni",
         category: "wedding",
-        imgSrc: woaini,
+        images: [woaini1, woaini2],
         details: {
             price: "1700",
             description: "",
@@ -119,7 +134,7 @@ export const data = [
         cakeName: "Devoted",
         slug: "devoted",
         category: "wedding",
-        imgSrc: devoted,
+        images: [devoted1, devoted2],
         details: {
             price: "1700",
             description: "",
@@ -130,7 +145,7 @@ export const data = [
         cakeName: "Everlasting",
         slug: "everlasting",
         category: "wedding",
-        imgSrc: everlasting,
+        images: [everlasting1, everlasting2],
         details: {
             price: "1700",
             description: "",
@@ -141,7 +156,7 @@ export const data = [
         cakeName: "Minis Monogram Cookie",
         slug: "minis-monogram-cookie",
         category: "monogram",
-        imgSrc: minis,
+        images: [minis1, minis2],
         details: {
             price: "1700",
             description: "",
@@ -152,7 +167,7 @@ export const data = [
         cakeName: "Floral Monogram Cookie",
         slug: "floral-monogram-cookie",
         category: "monogram",
-        imgSrc: floral,
+        images: [floral1, floral2],
         details: {
             price: "1700",
             description: "",
@@ -163,7 +178,7 @@ export const data = [
         cakeName: "Ocean Pastels Monogram",
         slug: "ocean-pastels-monogram",
         category: "monogram",
-        imgSrc: ocean,
+        images: [oceans1, oceans2],
         details: {
             price: "1700",
             description: "",
