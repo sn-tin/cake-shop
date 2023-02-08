@@ -14,12 +14,12 @@ const Navbar = () => {
                     <span></span>
                 </div>
                 <div className={styles.navMenuList}>
-                        <div>About</div>
-                        <div>Contact</div>
-                        <div>Cakes</div>
-                        <div>Login</div>
-                        <button>Register</button>
-                    </div>
+                    <div>About</div>
+                    <div>Contact</div>
+                    <div>Cakes</div>
+                    <div>Login</div>
+                    <button>Register</button>
+                </div>
                 <div className={styles.logoWrapper}>
                     <div className={styles.navLogo}>
                         <i className="fa-solid fa-cake-candles"></i>
