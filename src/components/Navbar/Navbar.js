@@ -1,6 +1,11 @@
+import { useState } from 'react';
 import styles from '../Navbar/Navbar.module.scss';
 
 const Navbar = () => {
+    const [isNavOpen, setIsNavOpen] = useState(false);
+    const handleNavMenu = () => {
+        setIsNavOpen(!isNavOpen)
+    }
     return (
         <nav className={styles.navbar}>
             <section className={styles.navWrapper}>
@@ -9,11 +14,11 @@ const Navbar = () => {
                     <div>Contact</div>
                     <div>Cakes</div>
                 </div>
-                <div className={styles.navMenu}>
+                <div className={styles.navMenu} onClick={handleNavMenu}>
                     <span></span>
                     <span></span>
                 </div>
-                <div className={styles.navMenuList}>
+                <div style={{display: isNavOpen ? "block" : "none"}} className={styles.navMenuList}>
                     <div>About</div>
                     <div>Contact</div>
                     <div>Cakes</div>
