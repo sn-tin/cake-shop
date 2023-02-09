@@ -19,7 +19,7 @@ const CakeDetails = () => {
         cake && (
           <div>
             <h1>{cake.cakeName}</h1>
-            <p>Php{cake.details.price}.00</p>
+            <p>Php {cake.details.price}.00</p>
             <button>Add to Cart</button>
             <button>Buy Now</button>
             <h3>Details</h3>
