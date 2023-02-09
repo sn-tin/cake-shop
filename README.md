@@ -1,4 +1,4 @@
-# REST Countries API with color theme switcher
+# Cake Shop
 An e-commerce shop for cakes and desserts.
 
 ![Design preview for Cake Shop #1](src/assets/Cake-Shop-1.jpg)
