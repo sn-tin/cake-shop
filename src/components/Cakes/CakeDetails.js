@@ -13,17 +13,19 @@ const CakeDetails = () => {
     setCake(findCake)
   }, [findCake])
 
+  const formatPrice = (value) => value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+
   const [cakeImage, setCakeImage] = useState(0)
 
   const handleClickImage = (e) => {
     setCakeImage(e.target.id)
   }
   return (
-    <div style={{height: "100vh", marginTop: "100px"}}>
-      <button onClick={() => navigate(-1)}>back</button>
+    <div className={styles.cakeDetailsPage}>
+      <button className={styles.goBackBtn} onClick={() => navigate(-1)}>Go Back</button>
       {
         cake && (
-          <div className={styles.cakeDetails}>
+          <div className={styles.cakeDetailed}>
             <div>
               <div className={styles.cakeDetailsImage}>
                 <img i={cakeImage} src={cake.images[cakeImage]} alt={`Reference photos for ${cake.cakeName}`}/>
@@ -46,8 +48,8 @@ const CakeDetails = () => {
               </div>
             </div>
             <div>
-              <h1>{cake.cakeName}</h1>
-              <p>Php {cake.details.price}.00</p>
+              <h2>{cake.cakeName}</h2>
+              <p>Php {formatPrice(cake.details.price)}.00</p>
               <button>Add to Cart</button>
               <button>Buy Now</button>
               <h3>Details</h3>

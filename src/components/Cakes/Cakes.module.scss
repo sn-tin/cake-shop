@@ -80,18 +80,41 @@ span.activeCategory {
 }
 
 /* Cake Details */ 
-
-.cakeDetails {
+.cakeDetailsPage {
+    margin-top: 100px;
+    padding: 20px;
+    .goBackBtn {
+        @include buttons($red);
+        width: 20%;
+        font-size: clamp(0.5rem, 2.5vw, 1.2rem);
+    }
+}
+.cakeDetailed {
+    width: 100%;
+    max-width: 1500px;
+    margin: auto;
     display: flex;
     flex-direction: column;
+    gap: 25px;
+    h2 {
+        color: $red;
+        font-size: clamp(1.5rem, 2.5vw, 2.25rem);
+        font-weight: 500;
+        margin-bottom: 10px;
+    }
+    p {
+        font-size: clamp(1rem, 2.5vw, 1.3rem);
+        font-weight: 500;
+    }
     @media screen and (min-width: $tablet) {
         flex-direction: row;
+        gap: 100px;
     }
 }
 .cakeDetailsImage {
     width: 100%;
     max-width: 500px;
-    padding: 25px 25px 10px;
+    padding: 25px 0 10px;
     img {
         width: 100%;
         border-radius: 8px;
