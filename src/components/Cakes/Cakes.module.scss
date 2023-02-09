@@ -26,7 +26,6 @@
     gap: 25px;
     margin: 30px auto;
     padding-bottom: 20px;
-    // border-bottom: 1px solid $lines-color;
     span {
         font-size: clamp(0.85rem, 2.5vw, 1.25rem);
         text-transform: capitalize;
@@ -78,4 +77,39 @@ span.activeCategory {
 .cakePrice {
     font-size: clamp(1.1rem, 2.5vw, 1.5rem);
     font-weight: 600;
+}
+
+/* Cake Details */ 
+
+.cakeDetails {
+    display: flex;
+    flex-direction: column;
+    @media screen and (min-width: $tablet) {
+        flex-direction: row;
+    }
+}
+.cakeDetailsImage {
+    width: 100%;
+    max-width: 500px;
+    padding: 25px 25px 10px;
+    img {
+        width: 100%;
+        border-radius: 8px;
+        object-fit: contain;
+    }
+    @media screen and (min-width: $tablet) {
+        padding: 0;
+    }
+}
+.cakeImageReferences {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    img {
+        width: 60px;
+        height: 60px;
+        border-radius: 5px;
+        object-fit: contain;
+    }
 }
