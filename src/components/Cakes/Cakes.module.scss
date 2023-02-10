@@ -81,17 +81,17 @@ span.activeCategory {
 
 /* Cake Details */ 
 .cakeDetailsPage {
-    margin-top: 100px;
+    width: 100%;
+    max-width: 1500px;
+    margin: 100px auto 0;
     padding: 20px;
     .goBackBtn {
         @include buttons($red);
-        width: 20%;
+        width: 100px;
         font-size: clamp(0.5rem, 2.5vw, 1.2rem);
     }
 }
 .cakeDetailed {
-    width: 100%;
-    max-width: 1500px;
     margin: auto;
     display: flex;
     flex-direction: column;
