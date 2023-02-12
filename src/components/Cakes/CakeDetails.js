@@ -2,6 +2,7 @@ import styles from './Cakes.module.scss';
 import React, { useEffect, useRef, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import cakeData from '../../cakeData';
+import CakesSlide from './CakesSlide';
 
 const CakeDetails = () => {
   const { slug } = useParams();
@@ -21,6 +22,7 @@ const CakeDetails = () => {
     setCakeImage(e.target.id)
   }
   return (
+    <>
     <div className={styles.cakeDetailsPage}>
       <button className={styles.goBackBtn} onClick={() => navigate(-1)}>Go Back</button>
       {
@@ -39,7 +41,7 @@ const CakeDetails = () => {
                         id={cake.images.indexOf(img)} 
                         style={{border: cakeImage == cake.images.indexOf(img) ? `2px solid #BA4D4A` : "none"}} 
                         src={img} 
-                        alt={`Additional reference photos for ${cake.name}`}
+                        alt={`Additional reference photos`}
                         onClick={handleClickImage}
                       />
                     )
@@ -50,17 +52,27 @@ const CakeDetails = () => {
             <div>
               <h2>{cake.cakeName}</h2>
               <p>Php {formatPrice(cake.details.price)}.00</p>
-              <button>Add to Cart</button>
-              <button>Buy Now</button>
+              <div className={styles.quantityCount}>
+                <span>Qty: </span>
+                <div className={styles.quantity}>
+                  <i className="fa-solid fa-minus fa-xs"></i>
+                  <span>1</span>
+                  <i className="fa-solid fa-plus fa-xs"></i>
+                </div>
+              </div>
+              <button className={styles.addToCart}>Add to Cart</button>
+              <button className={styles.buyNow}>Buy Now</button>
               <h3>Details</h3>
               <ul>
-                { cake.details.description.map(desc => <li key={desc}>{desc}</li>) }
+                { cake.details.description.map(desc => <li style={{listStylePosition: "inside"}} key={desc}>{desc}</li>) }
               </ul>
             </div>
           </div>
         )
       }
     </div>
+    <CakesSlide currentCake={cake} formatPrice={formatPrice} />
+    </>
   )
 }
 

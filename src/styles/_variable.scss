@@ -6,11 +6,12 @@ $bodyFont: 'Inter', sans-serif;
 $red: #BA4D4A;
 $cream: #FEFAF8;
 $dark-gray: #797979;
-$light-gray: #D9D9D9;
+$light-gray: #EAE8E7;
 $white: #FFFFFF;
 $black: #000000;
+$text-gray: #6A6A6A;
 $lines-color: #D6D6D6;
-$gradient: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%);
+$gradient: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, $white 100%);
 
 /* Devices */
 $mobileS: '320px';
@@ -42,10 +43,8 @@ $desktop: '2560px';
 }
 
 @mixin buttons ($bgColor) {
-    width: 180px;
     color: $white;
-    font-size: clamp(1rem, 2.5vw, 1.2rem);
-    text-transform: uppercase;
+    font-size: clamp(0.9rem, 2.5vw, 1.1rem);
     background-color: $bgColor;
     border: 0;
     padding: 10px 8px;

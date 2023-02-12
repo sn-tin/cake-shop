@@ -85,10 +85,43 @@ span.activeCategory {
     max-width: 1500px;
     margin: 100px auto 0;
     padding: 20px;
+    h2 {
+        color: $red;
+        font-size: clamp(1.5rem, 2.5vw, 2.25rem);
+        font-weight: 500;
+        margin-bottom: 10px;
+    }
+    h3 {
+        font-family: $bodyFont;
+        font-size: clamp(1rem, 2.5vw, 1.25rem);
+        font-weight: 500;
+        padding: 25px 0 15px;
+        border-bottom: 1px solid $lines-color
+    }
+    p {
+        font-size: clamp(0.9rem, 2.5vw, 1.3rem);
+        font-weight: 500;
+    }
+    ul {
+        padding-top: 15px;
+        li {
+            color: $text-gray;
+            font-size: clamp(0.9rem, 2.5vw, 1.125rem);
+            margin-bottom: 8px;
+        }
+    }
     .goBackBtn {
         @include buttons($red);
         width: 100px;
         font-size: clamp(0.5rem, 2.5vw, 1.2rem);
+    }
+    @media screen and (min-width: $tablet) {
+        h3 {
+            padding: 40px 0 25px;
+        }
+        ul {
+            padding-top: 25px;
+        }
     }
 }
 .cakeDetailed {
@@ -96,19 +129,10 @@ span.activeCategory {
     display: flex;
     flex-direction: column;
     gap: 25px;
-    h2 {
-        color: $red;
-        font-size: clamp(1.5rem, 2.5vw, 2.25rem);
-        font-weight: 500;
-        margin-bottom: 10px;
-    }
-    p {
-        font-size: clamp(1rem, 2.5vw, 1.3rem);
-        font-weight: 500;
-    }
+    margin: 60px auto;
     @media screen and (min-width: $tablet) {
         flex-direction: row;
-        gap: 100px;
+        gap: 30px;
     }
 }
 .cakeDetailsImage {
@@ -121,7 +145,7 @@ span.activeCategory {
         object-fit: contain;
     }
     @media screen and (min-width: $tablet) {
-        padding: 0;
+        padding: 0 0 20px;
     }
 }
 .cakeImageReferences {
@@ -135,4 +159,34 @@ span.activeCategory {
         border-radius: 5px;
         object-fit: contain;
     }
+}
+.quantityCount {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    margin: 25px 0;
+    span {
+        font-weight: 500;
+    }
+}
+.quantity {
+    background-color: $light-gray;
+    padding: 10px 2px;
+    i {
+        padding: 0 10px;
+    }
+    span {
+        background-color: $white;
+        padding: 8px 30px;
+    }
+}
+.addToCart {
+    width: 130px;
+    margin-right: 15px;
+    @include buttons($light-gray);
+}
+.buyNow {
+    width: 130px;
+    @include buttons($red);
 }
