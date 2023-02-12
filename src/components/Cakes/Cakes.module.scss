@@ -190,3 +190,18 @@ span.activeCategory {
     width: 130px;
     @include buttons($red);
 }
+/* Cake Slide */
+.slideWrapper {
+    width: 100%; 
+    max-width: 1500px; 
+    margin: auto; 
+    text-align: center; 
+    padding: 50px 20px;
+    position: relative;
+    :global(.swiper-pagination-bullet-active) {
+        background-color: $red !important;
+    }
+    :global(.swiper-pagination) {
+        bottom: 0 !important;
+    }
+}
