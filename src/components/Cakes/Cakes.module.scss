@@ -65,6 +65,7 @@ span.activeCategory {
 .cakeDetails {
     padding: 10px 0 0;
     p {
+        font-size: clamp(0.9rem, 2.5vw, 1.2rem);
         color: $black;
         text-align: left;
         padding-top: 5px;
@@ -167,6 +168,7 @@ span.activeCategory {
     gap: 10px;
     margin: 25px 0;
     span {
+        font-size: clamp(0.8rem, 2.5vw, 1rem);
         font-weight: 500;
     }
 }

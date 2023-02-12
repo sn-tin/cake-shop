@@ -1,4 +1,3 @@
-import { Grid } from '@mui/material';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -8,7 +7,6 @@ import styles from "./Cakes.module.scss";
 // swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
-import "swiper/swiper.min.css";
 
 
 const CakesSlide = ({currentCake, formatPrice}) => {
