@@ -129,7 +129,7 @@ span.activeCategory {
     display: flex;
     flex-direction: column;
     gap: 25px;
-    margin: 60px auto;
+    margin: 60px auto 0;
     @media screen and (min-width: $tablet) {
         flex-direction: row;
         gap: 30px;
@@ -191,17 +191,44 @@ span.activeCategory {
     @include buttons($red);
 }
 /* Cake Slide */
-.slideWrapper {
+.cakesSlide {
     width: 100%; 
-    max-width: 1500px; 
+    max-width: 1500px;
+    padding: 0 20px; 
+    margin: 100px auto;
+    h3 {
+        font-size: clamp(1.7rem, 2.5vw, 2.5rem);
+        text-align: center;
+        padding-bottom: 25px;
+        border-bottom: 1px solid $lines-color;
+    }
+    @media screen and (min-width: $tablet) {
+        padding: 0 50px;
+        margin: 200px auto;
+    }
+}
+.slideWrapper {
     margin: auto; 
     text-align: center; 
-    padding: 50px 20px;
+    padding: 50px 0 0;
     position: relative;
     :global(.swiper-pagination-bullet-active) {
+        color: $white;
+        font-weight: 500;
         background-color: $red !important;
     }
     :global(.swiper-pagination) {
+        position: relative;
         bottom: 0 !important;
+        margin: 30px auto 0;
+    }
+    :global(.swiper-pagination-bullet) {
+        width: 8px;
+        height: 8px;
+    }
+    @media screen and (min-width: $tablet) {
+        :global(.swiper-pagination) {
+            margin: 50px auto 0;
+        }
     }
 }

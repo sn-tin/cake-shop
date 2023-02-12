@@ -14,7 +14,7 @@ import "swiper/swiper.min.css";
 const CakesSlide = ({currentCake, formatPrice}) => {
     console.log("current cake list:", currentCake)
   return (
-    <section>
+    <section className={styles.cakesSlide}>
         <h3>You may also like</h3>
         <div className={styles.slideWrapper}>
             <Swiper
@@ -27,7 +27,6 @@ const CakesSlide = ({currentCake, formatPrice}) => {
                 }}
                 modules={[Pagination, Autoplay]}
                 pagination={{
-                    // el: `.${styles.paginationBullets}`,
                     clickable: true,
                 }}
                 breakpoints={{
