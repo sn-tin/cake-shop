@@ -3,8 +3,10 @@ import React, { useEffect, useRef, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import cakeData from '../../cakeData';
 import CakesSlide from './CakesSlide';
+import { useStateContext } from '../../context/StateContextProvider';
 
 const CakeDetails = () => {
+  const { quantity, increaseQty, decreaseQty } = useStateContext()
   const { slug } = useParams();
   const navigate = useNavigate();
   const [cake, setCake] = useState(null)
@@ -55,9 +57,9 @@ const CakeDetails = () => {
               <div className={styles.quantityCount}>
                 <span>Qty: </span>
                 <div className={styles.quantity}>
-                  <i className="fa-solid fa-minus fa-xs"></i>
-                  <span>1</span>
-                  <i className="fa-solid fa-plus fa-xs"></i>
+                  <i className="fa-solid fa-minus fa-xs" onClick={decreaseQty}></i>
+                  <span>{quantity}</span>
+                  <i className="fa-solid fa-plus fa-xs" onClick={increaseQty}></i>
                 </div>
               </div>
               <button className={styles.addToCart}>Add to Cart</button>

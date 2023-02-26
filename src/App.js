@@ -4,10 +4,11 @@ import Footer from './components/Footer/Footer';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import LandingPage from './components/LandingPage';
 import CakeDetails from './components/Cakes/CakeDetails';
+import StateContextProvider from './context/StateContextProvider';
 
 function App() {
   return (
-    <>
+    <StateContextProvider>
       <BrowserRouter>
         <Navbar />
         <Routes>
@@ -17,7 +18,7 @@ function App() {
         <Cta />
         <Footer />
       </BrowserRouter>
-    </>
+    </StateContextProvider>
   );
 }
 

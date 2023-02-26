@@ -1,12 +1,12 @@
-import { useState } from 'react';
+import { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { StateContext, useStateContext } from '../../context/StateContextProvider';
 import styles from '../Navbar/Navbar.module.scss';
 
+
 const Navbar = () => {
-    const [isNavOpen, setIsNavOpen] = useState(false);
-    const handleNavMenu = () => {
-        setIsNavOpen(!isNavOpen)
-    }
+    const { handleCartClick } = useStateContext()
+    const { isNavOpen, handleNavMenu } = useStateContext();
     return (
         <nav className={styles.navbar}>
             <section className={styles.navWrapper}>
@@ -38,7 +38,7 @@ const Navbar = () => {
                     <div className={styles.login}>Login</div>
                     <div className={styles.register}>Register</div>
                     <div className={styles.cart}>
-                        <i className="fa-solid fa-cart-shopping fa-xl"></i>
+                        <i className="fa-solid fa-cart-shopping fa-xl" onClick={handleCartClick}></i>
                         <div className={styles.cartCounter}>10+</div>
                     </div>
                 </div>
