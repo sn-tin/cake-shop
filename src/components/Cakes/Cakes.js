@@ -28,7 +28,7 @@ const CakeList = () => {
 
     const formatPrice = (value) => value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     return (
-        <section className={styles.cakesMenu}>
+        <section id="cakes-section" className={styles.cakesMenu}>
             <div className={styles.cakesWrapper}>
                 <h2>Our Cakes</h2>
                 <div className={styles.cakeCategory}>

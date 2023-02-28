@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { useStateContext } from '../../context/StateContextProvider';
 import styles from '../Navbar/Navbar.module.scss';
 
@@ -20,18 +20,18 @@ const Navbar = () => {
         <nav className={styles.navbar}>
             <section className={styles.navWrapper}>
                 <div className={styles.rightLinks}>
-                    <div>About</div>
-                    <div>Contact</div>
-                    <div>Cakes</div>
+                    <NavLink to="/#cakes" onClick={handleClick("cakes")}>Cakes</NavLink>
+                    <NavLink to='/about'>About</NavLink>
+                    <NavLink to="#contact" onClick={handleClick("contact")}>Contact</NavLink>
                 </div>
                 <div className={styles.navMenu} onClick={handleNavMenu}>
                     <span></span>
                     <span></span>
                 </div>
                 <div style={{display: isNavOpen ? "block" : "none"}} className={styles.navMenuList}>
-                    <a href="#about" onClick={handleClick("about")}>About</a>
+                    <NavLink to="/#cakes" onClick={handleClick("cakes")}>Cakes</NavLink>
+                    <NavLink to="/about">About</NavLink>
                     <a href="#contact" onClick={handleClick("contact")}>Contact</a>
-                    <a href="#cakes" onClick={handleClick("cakes")}>Cakes</a>
                     <div>Login</div>
                     <button>Register</button>
                 </div>

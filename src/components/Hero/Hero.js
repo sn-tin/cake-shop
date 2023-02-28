@@ -4,8 +4,8 @@ import slideImg1 from '../../assets/cake-header-1.jpeg';
 
 const Hero = () => {
     return (
-        <div className={styles.hero}>
-            <section className={styles.heroWrapper}>
+        <section className={styles.hero}>
+            <div className={styles.heroWrapper}>
                 <div className={styles.heroContent}>
                     <h1>Where dedication<br/>& perfection meet.</h1>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod!</p>
@@ -15,8 +15,8 @@ const Hero = () => {
                     <img src={slideImg1} alt="Cake for hero section"/>
                     <div className={styles.gradientOverlay}></div>
                 </div>
-            </section>
-        </div>
+            </div>
+        </section>
     )
 }
 

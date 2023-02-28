@@ -3,7 +3,7 @@ import styles from '../Footer/Footer.module.scss';
 
 const Footer = () => {
   return (
-    <footer className={styles.footer}>
+    <footer id="contact-section" className={styles.footer}>
         <section className={styles.footerWrapper}>
             <div className={styles.footerContent}>
                 <h1 className={styles.footerLogoName}>

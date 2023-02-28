@@ -5,6 +5,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import LandingPage from './components/LandingPage';
 import CakeDetails from './components/Cakes/CakeDetails';
 import StateContextProvider from './context/StateContextProvider';
+import About from './components/About/About';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route path='/' element={<LandingPage />}></Route>
+          <Route path='/about' element={<About />}></Route>
           <Route path='/cakes/:slug' element={<CakeDetails />}></Route>
         </Routes>
         <Cta />
