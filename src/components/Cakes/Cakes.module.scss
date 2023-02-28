@@ -135,6 +135,10 @@ span.activeCategory {
         flex-direction: row;
         gap: 30px;
     }
+    @media screen and (min-width: $laptop) {
+        flex-direction: row;
+        gap: 150px;
+    }
 }
 .cakeDetailsImage {
     width: 100%;
