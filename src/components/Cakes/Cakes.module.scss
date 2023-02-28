@@ -7,7 +7,7 @@
 .cakesWrapper {
     width: 100%;
     max-width: 1500px;
-    padding: 12px;
+    padding: 20px;
     margin: 80px auto;
     text-align: center;
     position: relative;
@@ -117,6 +117,7 @@ span.activeCategory {
         font-size: clamp(0.5rem, 2.5vw, 1.2rem);
     }
     @media screen and (min-width: $tablet) {
+        padding: 50px;
         h3 {
             padding: 40px 0 25px;
         }
@@ -137,7 +138,7 @@ span.activeCategory {
     }
     @media screen and (min-width: $laptop) {
         flex-direction: row;
-        gap: 150px;
+        gap: 100px;
     }
 }
 .cakeDetailsImage {
