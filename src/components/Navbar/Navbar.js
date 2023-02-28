@@ -6,6 +6,16 @@ import styles from '../Navbar/Navbar.module.scss';
 const Navbar = () => {
     const { handleCartClick } = useStateContext()
     const { isNavOpen, handleNavMenu } = useStateContext();
+    const handleClick = (anchor) => () => {
+        const id = `${anchor}-section`;
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
+        };
+    }
     return (
         <nav className={styles.navbar}>
             <section className={styles.navWrapper}>
@@ -19,9 +29,9 @@ const Navbar = () => {
                     <span></span>
                 </div>
                 <div style={{display: isNavOpen ? "block" : "none"}} className={styles.navMenuList}>
-                    <div>About</div>
-                    <div>Contact</div>
-                    <div>Cakes</div>
+                    <a href="#about" onClick={handleClick("about")}>About</a>
+                    <a href="#contact" onClick={handleClick("contact")}>Contact</a>
+                    <a href="#cakes" onClick={handleClick("cakes")}>Cakes</a>
                     <div>Login</div>
                     <button>Register</button>
                 </div>
