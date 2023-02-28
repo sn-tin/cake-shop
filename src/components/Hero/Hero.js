@@ -8,7 +8,7 @@ const Hero = () => {
             <div className={styles.heroWrapper}>
                 <div className={styles.heroContent}>
                     <h1>Where dedication<br/>& perfection meet.</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod!</p>
+                    <p>Make your day even more special! Same day delivery within Bacoor, Cavite.</p>
                     <button>Shop Now</button>
                 </div>
                 <div className={styles.imageWrapper}>
