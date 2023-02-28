@@ -19,7 +19,7 @@ const CakesSlide = ({currentCake, formatPrice}) => {
                 spaceBetween={10}
                 loop={true}
                 autoplay={{
-                    delay: 2000,
+                    delay: 800,
                     disableOnInteraction: false,
                     pauseOnMouseEnter: true,
                 }}
