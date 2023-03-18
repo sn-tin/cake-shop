@@ -21,6 +21,8 @@ export default function StateContextProvider({children}) {
     const handleCartClick = () => {
       setShowCart(!showCart)
     }
+    /* Format price/number */ 
+    const formatPrice = (value) => value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   return (
     <StateContext.Provider value={{
         isNavOpen,
@@ -29,7 +31,8 @@ export default function StateContextProvider({children}) {
         increaseQty,
         decreaseQty,
         showCart,
-        handleCartClick
+        handleCartClick,
+        formatPrice
     }}>
         {children}
     </StateContext.Provider>

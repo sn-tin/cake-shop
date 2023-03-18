@@ -2,9 +2,11 @@ import { Grid } from "@mui/material"
 import { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
 import data from "../../cakeData"
+import { useStateContext } from "../../context/StateContextProvider"
 import styles from "./Cakes.module.scss"
 
 const CakeList = () => {
+    const { formatPrice } = useStateContext();
     const [cakes, setCakes] = useState(data);
     /* Cake Category*/ 
     const categoryList = ["All", "Wedding", "Vintage", "Monogram"]
@@ -25,8 +27,6 @@ const CakeList = () => {
         filterCake()
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [cakeCategory])
-
-    const formatPrice = (value) => value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     return (
         <section id="cakes-section" className={styles.cakesMenu}>
             <div className={styles.cakesWrapper}>

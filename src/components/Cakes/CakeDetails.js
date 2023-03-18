@@ -6,17 +6,19 @@ import CakesSlide from './CakesSlide';
 import { useStateContext } from '../../context/StateContextProvider';
 
 const CakeDetails = () => {
-  const { quantity, increaseQty, decreaseQty } = useStateContext()
+  const { quantity, increaseQty, decreaseQty, formatPrice } = useStateContext()
   const { slug } = useParams();
   const navigate = useNavigate();
   const [cake, setCake] = useState(null)
-  
+  /* Scroll to top when selected from cakes selection */
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   let findCake = cakeData.find(cake => cake.slug === slug);
   useEffect(() => {
     setCake(findCake)
   }, [findCake])
-
-  const formatPrice = (value) => value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 
   const [cakeImage, setCakeImage] = useState(0)
 

@@ -8,7 +8,7 @@ const LandingPage = () => {
   const { showCart } = useStateContext()
   return (
     <>
-        { showCart && <Orders /> }
+        { showCart && <Orders />}
         <Hero />
         <CakeList />
     </>
