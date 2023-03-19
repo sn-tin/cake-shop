@@ -7,10 +7,11 @@ import styles from "./Cakes.module.scss";
 // swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
+import { useStateContext } from '../../context/StateContextProvider';
 
 
-const CakesSlide = ({currentCake, formatPrice}) => {
-    console.log("current cake list:", currentCake)
+const CakesSlide = ({currentCake}) => {
+  const { formatPrice } = useStateContext();
   return (
     <section className={styles.cakesSlide}>
         <h3>You may also like</h3>
@@ -41,21 +42,19 @@ const CakesSlide = ({currentCake, formatPrice}) => {
             >
                 {
                     currentCake && 
-                    cakes.filter(list => list.slug !== currentCake.slug).map(lists => {
-                        return (
-                            <>
-                                <SwiperSlide>
-                                    <Link to={`/cakes/${lists.slug}`} className={styles.cardLink}>
-                                        <img className={styles.cakeImage} src={lists.images[0]} alt={lists.cakeName} />
-                                        <div className={styles.cakeDetails}>
-                                            <p className={styles.cakeName}>{lists.cakeName}</p>
-                                            <p className={styles.cakePrice}>Php {formatPrice(lists.details.price)}.00</p>
-                                        </div>
-                                    </Link>
-                                </SwiperSlide>
-                            </>
+                    cakes.filter(list => list.slug !== currentCake.slug).map((lists, index) => (
+                        (
+                           <SwiperSlide key={index}>
+                               <Link to={`/cakes/${lists.slug}`} className={styles.cardLink}>
+                                   <img className={styles.cakeImage} src={lists.images[0]} alt={lists.cakeName} />
+                                   <div className={styles.cakeDetails}>
+                                       <p className={styles.cakeName}>{lists.cakeName}</p>
+                                       <p className={styles.cakePrice}>Php {formatPrice(lists.details.price)}.00</p>
+                                   </div>
+                               </Link>
+                           </SwiperSlide>
                         )
-                    })
+                    ))
                 }
             </Swiper>
         </div>

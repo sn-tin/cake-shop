@@ -7,13 +7,13 @@ import CakeDetails from './components/Cakes/CakeDetails';
 import StateContextProvider, { useStateContext } from './context/StateContextProvider';
 import About from './components/About/About';
 import Orders from './components/Orders/Orders';
-import { useEffect } from 'react';
 
 function App() {
+  const { showCart } = useStateContext()
   return (
-    <StateContextProvider>
       <BrowserRouter>
         <Navbar />
+        { showCart && <Orders />}
         <Routes>
           <Route path='/' element={<LandingPage />}></Route>
           <Route path='/about' element={<About />}></Route>
@@ -22,7 +22,6 @@ function App() {
         <Cta />
         <Footer />
       </BrowserRouter>
-    </StateContextProvider>
   );
 }
 
