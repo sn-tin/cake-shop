@@ -7,14 +7,14 @@ export default function StateContextProvider({children}) {
     const handleNavMenu = () => {
         setIsNavOpen(!isNavOpen)
     }
-    const [quantity, setQuantity] = useState(0)
+    const [quantity, setQuantity] = useState(1)
     const increaseQty = () => {
       setQuantity(prevState => prevState + 1)
     }
     const decreaseQty = () => {
       setQuantity(prevState => prevState - 1)
-      if(quantity <= 0) {
-        setQuantity(0)
+      if(quantity <= 1) {
+        setQuantity(1)
       }
     }
     const [showCart, setShowCart] = useState(false);

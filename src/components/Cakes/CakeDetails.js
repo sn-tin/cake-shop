@@ -24,16 +24,16 @@ const CakeDetails = () => {
     setCake(findCake)
   }, [findCake])
 
-  const item = useCart();
+  const items = useCart();
 
   const handleAddToCart = (product, button) => {
     if(button === "Buy Now") {
       dispatch({type: "ADD", product})
-      handleCartClick()
+      handleCartClick() /* open or closes cart */
     } else if(button === "Add to Cart") {
       dispatch({type: "ADD", product})
     } 
-    console.log(item)
+    console.log(product) /* console log the target product */
   }
 
   const [cakeImage, setCakeImage] = useState(0)
@@ -50,7 +50,7 @@ const CakeDetails = () => {
           <div className={styles.cakeDetailed}>
             <div>
               <div className={styles.cakeDetailsImage}>
-                <img i={cakeImage} src={cake.images[cakeImage]} alt={`Reference photos for ${cake.cakeName}`}/>
+                <img id={cakeImage} src={cake.images[cakeImage]} alt={`Reference photos for ${cake.cakeName}`}/>
               </div>
               <div className={styles.cakeImageReferences}>
                 {

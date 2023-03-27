@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useEffect, useReducer } from 'react';
+import React, { createContext, useContext, useReducer } from 'react';
 
 const CartStateContext = createContext(null);
 const CartDispatchContext = createContext(null);
@@ -6,7 +6,7 @@ const CartDispatchContext = createContext(null);
 const reducer = (state, action) => {
     switch(action.type) {
         case "ADD": 
-            return [...state, action.item];
+            return [...state, action.product]
         case "REMOVE":
             const newArr = [...state];
             newArr.splice(action.index, 1);
