@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useCart, useDispatchCart } from '../../context/ReducerProvider';
 import { useStateContext } from '../../context/StateContextProvider';
 import styles from '../Orders/Orders.module.scss';
@@ -28,9 +28,18 @@ export default function Orders() {
                 <div className="order-img-wrapper">
                   <img src={cake?.images[0]} alt={`${cake?.cakeName}`} />
                 </div>
-                <h1>{cake?.cakeName}</h1>
-                <p>{cake?.category}</p>
-                <p>{cake?.details.price}</p>
+                <div className="order-details">
+                  <div>
+                    <h1>{cake?.cakeName}</h1>
+                    <p>{cake?.category} Cake</p>
+                    <p>{cake?.details.price}</p>
+                  </div>
+                  <div className={styles.quantity}>
+                    <i className="fa-solid fa-minus fa-xs" ></i>
+                    <span>1</span>
+                    <i className="fa-solid fa-plus fa-xs" ></i>
+                  </div>
+                </div>
               </div>
             ))
           )

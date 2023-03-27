@@ -73,3 +73,6 @@
         text-transform: uppercase;
     }
 }
+.quantity {
+    @include quantityBtn;
+}
