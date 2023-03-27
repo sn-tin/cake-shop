@@ -179,6 +179,14 @@ span.activeCategory {
 }
 .quantity {
     @include quantityBtn;
+    width: 140px;
+    height: 45px;
+    i {
+        margin: auto;
+    }
+    span {
+        padding: 8px 30px;
+    }
 }
 .addToCart {
     width: 130px;
