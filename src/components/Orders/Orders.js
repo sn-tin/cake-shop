@@ -6,12 +6,13 @@ import EmptyState from './EmptyState';
 
 export default function Orders() {
   const { handleCartClick } = useStateContext();
-  const items = useCart(); /* data returned on state from useReducer */
+  const items = useCart();
   const dispatch = useDispatchCart();
+  const totalPrice = items.reduce((total, b) => total + b.price, 0);
 
   const handleRemoveCart = (index) => {
     dispatch({ type: "REMOVE", index})
-    console.log(index)
+    console.log("removed")
   }
   
   return (
@@ -50,7 +51,7 @@ export default function Orders() {
         </div>
         <div className={styles.totalSummary}>
             <span>Subtotal</span>
-            <span>Php 0.00</span>
+            <span>Php {totalPrice}</span>
         </div>
       </div>
     </section>

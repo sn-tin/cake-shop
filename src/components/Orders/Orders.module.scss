@@ -7,6 +7,9 @@
     right: 0;
     top: 0;
     z-index: 1000;
+    i {
+        cursor: pointer;
+    }
 }
 .ordersContainer {
     display: flex;
@@ -66,9 +69,6 @@
     flex-direction: row;
     &:not(:last-of-type) {
         margin-bottom: 15px;
-    }
-    .fa-x {
-        cursor: pointer;
     }
 }
 .order-img-wrapper {
