@@ -4,15 +4,11 @@ import { useNavigate, useParams } from 'react-router-dom';
 import cakeData from '../../cakeData';
 import CakesSlide from './CakesSlide';
 import { useStateContext } from '../../context/StateContextProvider';
-import { useCart, useDispatchCart } from '../../context/ReducerProvider';
 
 const CakeDetails = () => {
-  const { quantity, increaseQty, decreaseQty, formatPrice, handleCartClick } = useStateContext();
-  const dispatch = useDispatchCart();
+  const { cake, displayCakeDetails, quantity, increaseQty, decreaseQty, formatPrice, onAddClick } = useStateContext();
   const { slug } = useParams();
   const navigate = useNavigate();
-
-  const [cake, setCake] = useState(null)
 
   /* Scroll to top when selected from cakes selection */
   useEffect(() => {
@@ -21,20 +17,8 @@ const CakeDetails = () => {
 
   let findCake = cakeData.find(cake => cake.slug === slug);
   useEffect(() => {
-    setCake(findCake)
+    displayCakeDetails(findCake)
   }, [findCake])
-
-  const items = useCart();
-
-  const handleAddToCart = (product, button) => {
-    if(button === "Buy Now") {
-      dispatch({type: "ADD", product})
-      handleCartClick() /* open or closes cart */
-    } else if(button === "Add to Cart") {
-      dispatch({type: "ADD", product})
-    } 
-    console.log(product) /* console log the target product */
-  }
 
   const [cakeImage, setCakeImage] = useState(0)
 
@@ -80,8 +64,8 @@ const CakeDetails = () => {
                   <i className="fa-solid fa-plus fa-xs" onClick={increaseQty}></i>
                 </div>
               </div>
-              <button className={styles.addToCart} onClick={(e) => handleAddToCart(cake, e.target.innerText)}>Add to Cart</button>
-              <button className={styles.buyNow} onClick={(e) => handleAddToCart(cake, e.target.innerText)}>Buy Now</button>
+              <button className={styles.addToCart} onClick={(e) => onAddClick(cake, e.target.innerText)}>Add to Cart</button>
+              <button className={styles.buyNow} onClick={(e) => onAddClick(cake, e.target.innerText)}>Buy Now</button>
               <h3>Details</h3>
               <ul>
                 { cake.details.description.map(desc => <li style={{listStylePosition: "inside"}} key={desc}>{desc}</li>) }

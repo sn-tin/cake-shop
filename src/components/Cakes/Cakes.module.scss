@@ -164,6 +164,7 @@ span.activeCategory {
         height: 60px;
         border-radius: 5px;
         object-fit: contain;
+        cursor: pointer;
     }
 }
 .quantityCount {
@@ -179,13 +180,17 @@ span.activeCategory {
 }
 .quantity {
     @include quantityBtn;
-    width: 140px;
+    width: 130px;
     height: 45px;
     i {
         margin: auto;
     }
     span {
-        padding: 8px 30px;
+        padding: 10px 30px;
+    }
+    @media screen and (min-width: $laptop) {
+        width: 140px;
+        height: 48px;
     }
 }
 .addToCart {

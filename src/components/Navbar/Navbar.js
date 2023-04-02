@@ -1,12 +1,10 @@
 import { Link, NavLink } from 'react-router-dom';
-import { useCart } from '../../context/ReducerProvider';
 import { useStateContext } from '../../context/StateContextProvider';
 import styles from '../Navbar/Navbar.module.scss';
 
 
 const Navbar = () => {
-    const { handleCartClick, isNavOpen, handleNavMenu } = useStateContext()
-    const items = useCart();
+    const { cartItems, handleCartClick, isNavOpen, handleNavMenu } = useStateContext()
 
     const handleClick = (anchor) => () => {
         const id = `${anchor}-section`;
@@ -50,7 +48,7 @@ const Navbar = () => {
                     <div className={styles.register}>Register</div>
                     <div className={styles.cart}>
                         <i className="fa-solid fa-cart-shopping fa-xl" onClick={handleCartClick}></i>
-                        <div className={styles.cartCounter}>{items.length}</div>
+                        <div className={styles.cartCounter}>{cartItems.length}</div>
                     </div>
                 </div>
             </section>

@@ -4,15 +4,12 @@ import App from './App';
 import './styles/global.scss'
 import reportWebVitals from './reportWebVitals';
 import StateContextProvider from './context/StateContextProvider';
-import ReducerProvider from './context/ReducerProvider';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <StateContextProvider>
-      <ReducerProvider>
-        <App />
-      </ReducerProvider>
+      <App />
     </StateContextProvider>
   </React.StrictMode>
 );

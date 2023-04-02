@@ -4,7 +4,7 @@ import Footer from './components/Footer/Footer';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import LandingPage from './components/LandingPage';
 import CakeDetails from './components/Cakes/CakeDetails';
-import StateContextProvider, { useStateContext } from './context/StateContextProvider';
+import { useStateContext } from './context/StateContextProvider';
 import About from './components/About/About';
 import Orders from './components/Orders/Orders';
 

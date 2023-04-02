@@ -36,8 +36,8 @@ const CakeList = () => {
                 </div>
                 <div className={styles.dividerLine}><div></div></div>
                 <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 1, md: 3 }}>
-                    { cakes.map(cake => (
-                        <Grid item xs={6} md={4} mb={5}>
+                    { cakes.map((cake, index) => (
+                        <Grid key={index} item xs={6} md={4} mb={5}>
                             <Link to={`/cakes/${cake.slug}`} className={styles.cardLink}>
                                 <img className={styles.cakeImage} src={cake.images[0]} alt={cake.cakeName} />
                                 <div className={styles.cakeDetails}>
