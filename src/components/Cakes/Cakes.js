@@ -6,7 +6,7 @@ import { useStateContext } from "../../context/StateContextProvider"
 import styles from "./Cakes.module.scss"
 
 const CakeList = () => {
-    const { formatPrice } = useStateContext();
+    const { formatPrice, scrollToTop } = useStateContext();
     const [cakes, setCakes] = useState(data);
     /* Cake Category*/ 
     const categoryList = ["All", "Wedding", "Vintage", "Monogram"]
@@ -38,7 +38,7 @@ const CakeList = () => {
                 <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 1, md: 3 }}>
                     { cakes.map((cake, index) => (
                         <Grid key={index} item xs={6} md={4} mb={5}>
-                            <Link to={`/cakes/${cake.slug}`} className={styles.cardLink}>
+                            <Link to={`/cakes/${cake.slug}`} className={styles.cardLink} onClick={scrollToTop}>
                                 <img className={styles.cakeImage} src={cake.images[0]} alt={cake.cakeName} />
                                 <div className={styles.cakeDetails}>
                                     <p className={styles.cakeName}>{cake.cakeName}</p>

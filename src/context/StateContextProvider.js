@@ -5,6 +5,7 @@ export const StateContext = createContext()
 export default function StateContextProvider({children}) {
     const [isNavOpen, setIsNavOpen] = useState(false);
     const [quantity, setQuantity] = useState(1)
+    const [totalQty, setTotalQty] = useState(0)
     const [showCart, setShowCart] = useState(false);
     const [cake, setCake] = useState(null)
     const [cartItems, setCartItems] = useState([])
@@ -62,6 +63,7 @@ export default function StateContextProvider({children}) {
         handleCartClick()
       }
       setTotalPrice(prevTotalPrice => prevTotalPrice + product.details.price * quantity)
+      setTotalQty(prevTotalQuantities => prevTotalQuantities + quantity)
       setQuantity(1)
     }
     
@@ -69,6 +71,7 @@ export default function StateContextProvider({children}) {
       const deleteItem = cartItems.filter(item => item.index !== cake.index)
       setCartItems(deleteItem)
       setTotalPrice(prevTotalPrice => prevTotalPrice - cake.quantity * cake.details.price)
+      setTotalQty(prevTotalQuantities => prevTotalQuantities - cake.quantity)
     }
 
     const cartItemQty = (value, id) => {
@@ -105,10 +108,10 @@ export default function StateContextProvider({children}) {
             }
           }
         } else {
-          return {
-            ...item,
+            return {
+              ...item,
+            }
           }
-        }
         })
         setCartItems(updateCartItem)
       }
@@ -133,7 +136,7 @@ export default function StateContextProvider({children}) {
         cake,
         displayCakeDetails,
         quantity,
-        setQuantity,
+        totalQty,
         increaseQty,
         decreaseQty,
         showCart,

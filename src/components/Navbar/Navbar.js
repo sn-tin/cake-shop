@@ -4,7 +4,7 @@ import styles from '../Navbar/Navbar.module.scss';
 
 
 const Navbar = () => {
-    const { cartItems, handleCartClick, isNavOpen, handleNavMenu } = useStateContext()
+    const { cartItems, handleCartClick, isNavOpen, handleNavMenu, totalQty } = useStateContext()
 
     const handleClick = (anchor) => () => {
         const id = `${anchor}-section`;
@@ -48,7 +48,7 @@ const Navbar = () => {
                     <div className={styles.register}>Register</div>
                     <div className={styles.cart}>
                         <i className="fa-solid fa-cart-shopping fa-xl" onClick={handleCartClick}></i>
-                        <div className={styles.cartCounter}>{cartItems.length}</div>
+                        <div className={styles.cartCounter}>{totalQty}</div>
                     </div>
                 </div>
             </section>

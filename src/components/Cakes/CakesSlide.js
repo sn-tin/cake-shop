@@ -12,6 +12,11 @@ import { useStateContext } from '../../context/StateContextProvider';
 
 const CakesSlide = ({currentCake}) => {
   const { formatPrice } = useStateContext();
+  
+  const scrollToTop = () => {
+    window.scrollTo(0, 0)
+  }
+
   return (
     <section className={styles.cakesSlide}>
         <h3>You may also like</h3>
@@ -45,7 +50,7 @@ const CakesSlide = ({currentCake}) => {
                     cakes.filter(list => list.slug !== currentCake.slug).map((lists, index) => (
                         (
                            <SwiperSlide key={index}>
-                               <Link to={`/cakes/${lists.slug}`} className={styles.cardLink}>
+                               <Link to={`/cakes/${lists.slug}`} className={styles.cardLink} onClick={scrollToTop}>
                                    <img className={styles.cakeImage} src={lists.images[0]} alt={lists.cakeName} />
                                    <div className={styles.cakeDetails}>
                                        <p className={styles.cakeName}>{lists.cakeName}</p>
