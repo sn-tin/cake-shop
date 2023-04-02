@@ -40,7 +40,7 @@ export default function StateContextProvider({children}) {
               }
           } else {
               return {
-                  ...cartItems
+                  ...item
               }
           }
       })
