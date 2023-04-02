@@ -18,7 +18,7 @@ const CakeDetails = () => {
   let findCake = cakeData.find(cake => cake.slug === slug);
   useEffect(() => {
     displayCakeDetails(findCake)
-  }, [findCake])
+  }, [displayCakeDetails, findCake])
 
   const [cakeImage, setCakeImage] = useState(0)
 
@@ -43,7 +43,7 @@ const CakeDetails = () => {
                       <img 
                         key={cake.images.indexOf(img)}
                         id={cake.images.indexOf(img)} 
-                        style={{border: cakeImage == cake.images.indexOf(img) ? `2px solid #BA4D4A` : "none"}} 
+                        style={{border: cakeImage === cake.images.indexOf(img) ? `2px solid #BA4D4A` : "none"}} 
                         src={img} 
                         alt={`Additional reference photos`}
                         onClick={handleClickImage}

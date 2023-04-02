@@ -4,7 +4,7 @@ import styles from '../Navbar/Navbar.module.scss';
 
 
 const Navbar = () => {
-    const { cartItems, handleCartClick, isNavOpen, handleNavMenu, totalQty } = useStateContext()
+    const { handleCartClick, isNavOpen, handleNavMenu, totalQty } = useStateContext()
 
     const handleClick = (anchor) => () => {
         const id = `${anchor}-section`;
