@@ -16,6 +16,9 @@
         opacity: 45%;
         position: absolute;
     }
+    @media screen and (min-width: $laptop) {
+        background-position: center 45%;
+    }
 }
 .ctaWrapper {
     position: absolute;
@@ -55,6 +58,7 @@
         padding: 0 20px;
     }
     @media screen and (min-width: $tablet) {
+        width: 40rem;
         input {
             height: 50px;
         }
