@@ -9,7 +9,7 @@ export default function StateContextProvider({children}) {
     const [cake, setCake] = useState(null)
     const [cartItems, setCartItems] = useState([])
     const [totalPrice, setTotalPrice] = useState(0)
-
+    
     const handleNavMenu = () => {
         setIsNavOpen(!isNavOpen)
     }
@@ -71,33 +71,47 @@ export default function StateContextProvider({children}) {
       setTotalPrice(prevTotalPrice => prevTotalPrice - cake.quantity * cake.details.price)
     }
 
-    const cartItemQty = (ref, id) => {
+    const cartItemQty = (value, id) => {
       const foundItem = cartItems.find(item => item.index === id)
-      if(ref.current.className.includes("fa-plus")){
+      if(value === "inc"){
         const updateCartItem = cartItems.map((item) => {
-          if(foundItem.index === id) {
+          if(item.index === id) {
             return {
               ...item,
               quantity: item.quantity + 1
+            }
+          } else {
+            return {
+              ...item,
             }
           }
         })
         setCartItems(updateCartItem)
         setTotalPrice(prevTotalPrice => prevTotalPrice + parseInt(foundItem.details.price))
-      } else if(ref.current.className.includes("fa-minus")){
+      }
+      if(value === "dec"){
         const updateCartItem = cartItems.map((item) => {
-          if(foundItem.index === id) {
+          if(item.index === id) {
+            if(item.quantity > 1){
+            setTotalPrice(prevTotalPrice => prevTotalPrice - parseInt(foundItem.details.price))
             return {
               ...item,
               quantity: item.quantity - 1
             }
+          } else {
+            return {
+              ...item,
+              quantity: 1
+            }
           }
+        } else {
+          return {
+            ...item,
+          }
+        }
         })
-        console.log(ref)
         setCartItems(updateCartItem)
-        setTotalPrice(prevTotalPrice => prevTotalPrice - parseInt(foundItem.details.price))
       }
-      console.log(ref)
     }
     
     const handleCartClick = () => {
