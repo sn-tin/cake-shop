@@ -40,7 +40,7 @@ const Navbar = () => {
                         <div className={styles.navLogo}>
                             <i className="fa-solid fa-cake-candles"></i>
                         </div>
-                        <h1 className={styles.navLogoName}>Cake Shop</h1>
+                        <h1 className={styles.navLogoName}>Cake It</h1>
                     </div>
                 </Link>
                 <div className={styles.leftLinks}>

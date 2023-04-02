@@ -10,7 +10,7 @@ const Footer = () => {
                     <div className={styles.footerLogoIcon}>
                         <i className="fa-solid fa-cake-candles"></i>
                     </div>
-                    Cake Shop
+                    Cake It
                 </h1>
                 <div className={styles.socialLinks}>
                     <a href="https://www.instagram.com/" target="_blank" rel="noreferrer"><i className="fa-brands fa-square-instagram fa-2xl"></i></a>
@@ -21,7 +21,7 @@ const Footer = () => {
             <div className={styles.footerContent}>
                 <h3>Contact Us</h3>
                 <div>
-                    <p>Cake Shop, 9th St,<br/>Bacoor, 4102 Cavite</p>
+                    <p>Cake It, 9th St,<br/>Bacoor, 4102 Cavite</p>
                     <p>8123-4567</p>
                     <p>cakeshop@gmail.com</p>
                     <p><strong>Operating Hours:</strong><br/>Mon - Sun 10:30am - 6pm<br/>Tuesday: Closed</p>
