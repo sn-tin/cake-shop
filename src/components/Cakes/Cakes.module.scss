@@ -114,7 +114,7 @@ span.activeCategory {
     .goBackBtn {
         @include buttons($red);
         width: 100px;
-        font-size: clamp(0.5rem, 2.5vw, 1.2rem);
+        font-size: clamp(0.7rem, 2.5vw, 1rem);
     }
     @media screen and (min-width: $tablet) {
         padding: 50px;
@@ -131,7 +131,7 @@ span.activeCategory {
     display: flex;
     flex-direction: column;
     gap: 25px;
-    margin: 60px auto 0;
+    margin: 25px auto 0;
     @media screen and (min-width: $tablet) {
         flex-direction: row;
         gap: 30px;
@@ -139,6 +139,7 @@ span.activeCategory {
     @media screen and (min-width: $laptop) {
         flex-direction: row;
         gap: 100px;
+        margin: 60px auto 0;
     }
 }
 .cakeDetailsImage {
