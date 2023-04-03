@@ -7,9 +7,13 @@ import CakeDetails from './components/Cakes/CakeDetails';
 import { useStateContext } from './context/StateContextProvider';
 import About from './components/About/About';
 import Orders from './components/Orders/Orders';
+import { useEffect } from 'react';
 
 function App() {
   const { showCart } = useStateContext()
+  useEffect(() => {
+    document.querySelector("body").style.overflow = showCart ? "hidden" : "visible";
+  },[showCart])
   return (
       <BrowserRouter>
         <Navbar />
