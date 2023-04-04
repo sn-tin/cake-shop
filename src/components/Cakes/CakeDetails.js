@@ -55,7 +55,7 @@ const CakeDetails = () => {
             </div>
             <div>
               <h2>{cake.cakeName}</h2>
-              <p>Php {formatPrice(cake.details.price)}.00</p>
+              <p>${formatPrice(cake.details.price)}</p>
               <div className={styles.quantityCount}>
                 <span>Qty: </span>
                 <div className={styles.quantity}>

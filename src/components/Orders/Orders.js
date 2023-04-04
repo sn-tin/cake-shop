@@ -42,8 +42,9 @@ export default function Orders() {
         </div>
         <div className={styles.totalSummary}>
             <span>Subtotal</span>
-            <span>Php {formatPrice(totalPrice)}</span>
+            <span>${formatPrice(totalPrice)}</span>
         </div>
+        { totalQty !== 0 && <button className={styles["order__payment"]}>Pay with Stripe</button> }
       </div>
     </section>
   )

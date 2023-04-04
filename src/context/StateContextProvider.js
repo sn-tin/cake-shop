@@ -90,14 +90,14 @@ export default function StateContextProvider({children}) {
           }
         })
         setCartItems(updateCartItem)
-        setTotalPrice(prevTotalPrice => prevTotalPrice + parseInt(foundItem.details.price))
+        setTotalPrice(prevTotalPrice => prevTotalPrice + foundItem.details.price)
         setTotalQty(prevTotalQuantities => prevTotalQuantities + 1)
       }
       if(value === "dec"){
         const updateCartItem = cartItems.map((item) => {
           if(item.index === id) {
             if(item.quantity > 1){
-            setTotalPrice(prevTotalPrice => prevTotalPrice - parseInt(foundItem.details.price))
+            setTotalPrice(prevTotalPrice => prevTotalPrice - foundItem.details.price)
             setTotalQty(prevTotalQuantities => prevTotalQuantities - 1)
             return {
               ...item,

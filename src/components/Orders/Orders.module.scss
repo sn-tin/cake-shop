@@ -121,6 +121,12 @@
         text-transform: uppercase;
     }
 }
+.order__payment {
+    width: 100%;
+    font-weight: 700;
+    margin: 30px 0 20px auto;
+    @include buttons($red);
+}
 .quantity {
     @include quantityBtn;
     margin-top: 10px;

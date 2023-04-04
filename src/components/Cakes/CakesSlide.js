@@ -54,7 +54,7 @@ const CakesSlide = ({currentCake}) => {
                                    <img className={styles.cakeImage} src={lists.images[0]} alt={lists.cakeName} />
                                    <div className={styles.cakeDetails}>
                                        <p className={styles.cakeName}>{lists.cakeName}</p>
-                                       <p className={styles.cakePrice}>Php {formatPrice(lists.details.price)}.00</p>
+                                       <p className={styles.cakePrice}>${formatPrice(lists.details.price)}</p>
                                    </div>
                                </Link>
                            </SwiperSlide>

@@ -8,7 +8,6 @@ import styles from "./Cakes.module.scss"
 const CakeList = () => {
     const { formatPrice, scrollToTop } = useStateContext();
     const [cakes, setCakes] = useState(data);
-    /* Cake Category*/ 
     const categoryList = ["All", "Wedding", "Vintage", "Monogram"]
     const [cakeCategory, setcakeCategory] = useState("All");
     const handleCakecCategory = (e) => {
@@ -42,7 +41,7 @@ const CakeList = () => {
                                 <img className={styles.cakeImage} src={cake.images[0]} alt={cake.cakeName} />
                                 <div className={styles.cakeDetails}>
                                     <p className={styles.cakeName}>{cake.cakeName}</p>
-                                    <p className={styles.cakePrice}>Php {formatPrice(cake.details.price)}.00</p>
+                                    <p className={styles.cakePrice}>${formatPrice(cake.details.price)}</p>
                                 </div>
                             </Link>
                         </Grid>
