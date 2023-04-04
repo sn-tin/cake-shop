@@ -1,10 +1,30 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useStateContext } from '../../context/StateContextProvider';
 import styles from '../Orders/Orders.module.scss';
 import EmptyState from './EmptyState';
 
 export default function Orders() {
   const { cartItems, handleRemoveCart, handleCartClick, totalPrice, cartItemQty, totalQty, formatPrice } = useStateContext()
+
+  const checkout = async () => {
+    await fetch('http://localhost:3000/checkout', {
+        method: "POST",
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({items: cartItems})
+    }).then((response) => {
+        return response.json();
+    }).then((response) => {
+        if(response.url) {
+            window.location.assign(response.url); // Forwarding user to Stripe
+        }
+    });
+  }
+
+  useEffect(() => {
+    console.log(cartItems)
+  })
 
   return (
     <section className={styles.orders}>
@@ -44,7 +64,7 @@ export default function Orders() {
             <span>Subtotal</span>
             <span>${formatPrice(totalPrice)}</span>
         </div>
-        { totalQty !== 0 && <button className={styles["order__payment"]}>Pay with Stripe</button> }
+        { totalQty !== 0 && <button className={styles["order__payment"]} onClick={checkout}>Pay with Stripe</button> }
       </div>
     </section>
   )

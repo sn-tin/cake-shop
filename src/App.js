@@ -8,6 +8,8 @@ import { useStateContext } from './context/StateContextProvider';
 import About from './components/About/About';
 import Orders from './components/Orders/Orders';
 import { useEffect } from 'react';
+import Success from './pages/Success';
+import Cancel from './pages/Cancel';
 
 function App() {
   const { showCart } = useStateContext()
@@ -22,6 +24,8 @@ function App() {
           <Route path='/' element={<LandingPage />}></Route>
           <Route path='/about' element={<About />}></Route>
           <Route path='/cakes/:slug' element={<CakeDetails />}></Route>
+          <Route path='/success' element={<Success />}></Route>
+          <Route path='/cancel' element={<Cancel />}></Route>
         </Routes>
         <Cta />
         <Footer />

@@ -30,6 +30,7 @@ import oceans2 from "./assets/oceans-mono-2.jpeg";
 export const data = [
     {
         index: 0,
+        price_id: "price_1MtAvtGZRtKSKH8eIuY4LcVh",
         cakeName: "Crown Princess",
         slug: "crown-princess",
         category: "vintage",
@@ -46,6 +47,7 @@ export const data = [
     },
     {
         index: 1,
+        price_id: "price_1MtAxGGZRtKSKH8eaG0InzM0",
         cakeName: "Vera Bear",
         slug: "vera-bear",
         category: "vintage",
@@ -61,6 +63,7 @@ export const data = [
     },
     {
         index: 2,
+        price_id: "price_1MtAxTGZRtKSKH8eNEHpzDgD",
         cakeName: "Romance Bear",
         slug: "romance-bear",
         category: "vintage",
@@ -76,6 +79,7 @@ export const data = [
     },
     {
         index: 3,
+        price_id: "price_1MtAxjGZRtKSKH8e1DNBf30u",
         cakeName: "Velvet Glow",
         slug: "velvet-glow",
         category: "vintage",
@@ -91,6 +95,7 @@ export const data = [
     },
     {
         index: 4,
+        price_id: "price_1MtAxvGZRtKSKH8ewNewnL8S",
         cakeName: "Ruby Duby",
         slug: "ruby-duby",
         category: "vintage",
@@ -106,6 +111,7 @@ export const data = [
     },
     {
         index: 5,
+        price_id: "price_1MtAykGZRtKSKH8ejIrcwUGz",
         cakeName: "Pearl",
         slug: "pearl",
         category: "wedding",
@@ -121,6 +127,7 @@ export const data = [
     },
     {
         index: 6,
+        price_id: "price_1MtAzXGZRtKSKH8exqyGDbnz",
         cakeName: "First Love",
         slug: "first-love",
         category: "wedding",
@@ -136,6 +143,7 @@ export const data = [
     },
     {
         index: 7,
+        price_id: "price_1MtB0nGZRtKSKH8elITpS3SZ",
         cakeName: "Adore",
         slug: "adore",
         category: "wedding",
@@ -151,6 +159,7 @@ export const data = [
     },
     {
         index: 8,
+        price_id: "price_1MtB17GZRtKSKH8eYxN0xRZz",
         cakeName: "Wo Ai Ni",
         slug: "wo-ai-ni",
         category: "wedding",
@@ -166,6 +175,7 @@ export const data = [
     },
     {
         index: 9,
+        price_id: "price_1MtB1KGZRtKSKH8eqBDOAKUB",
         cakeName: "Devoted",
         slug: "devoted",
         category: "wedding",
@@ -181,6 +191,7 @@ export const data = [
     },
     {
         index: 10,
+        price_id: "price_1MtB1RGZRtKSKH8ev7LCHgvt",
         cakeName: "Everlasting",
         slug: "everlasting",
         category: "wedding",
@@ -196,6 +207,7 @@ export const data = [
     },
     {
         index: 11,
+        price_id: "price_1MtB23GZRtKSKH8eVkxrP0TY",
         cakeName: "Minis Monogram Cookie",
         slug: "minis-monogram-cookie",
         category: "monogram",
@@ -211,6 +223,7 @@ export const data = [
     },
     {
         index: 12,
+        price_id: "price_1MtB2DGZRtKSKH8enG4yGihg",
         cakeName: "Floral Monogram Cookie",
         slug: "floral-monogram-cookie",
         category: "monogram",
@@ -226,6 +239,7 @@ export const data = [
     },
     {
         index: 13,
+        price_id: "price_1MtB2LGZRtKSKH8eOFyPbfOT",
         cakeName: "Ocean Pastels Monogram",
         slug: "ocean-pastels-monogram",
         category: "monogram",
