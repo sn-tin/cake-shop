@@ -1,0 +1,74 @@
+@import '../../styles/variable';
+
+.heroWrapper {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    @media screen and (min-width: $tablet) {
+        flex-direction: row;
+        padding: 0 0 0 50px;
+    }
+    @media screen and (min-width: $laptopL) {
+        padding: 0 0 0 250px;
+    }
+}
+.heroContent {
+    padding: 20px;
+    margin: auto;
+    h1 {
+        width: 100%;
+        font-size: clamp(2.6rem, 4vw, 5.5rem);
+        font-weight: 500;
+    }
+    p {
+        font-size: clamp(0.9rem, 2.5vw, 1.25rem);
+        color: $dark-gray;
+        margin: 28px 0;
+    }
+    button {
+        width: 180px;
+        text-transform: uppercase;
+        @include buttons($red);
+    }
+    @media screen and (min-wdith: $laptop) {
+        padding: 0;
+    }
+    @media screen and (min-width: $laptopL) {
+        button {
+            padding: 20px 10px;
+        }
+    }
+}
+.imageWrapper {
+    position: relative;
+    margin-top: 60px;
+    img {
+        width: 100%;
+    }
+    .gradientOverlay {
+        width: 100%;
+        height: 100px;
+        background-image: $gradient;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+    @media screen and (min-width: $laptop) {
+        img {
+            width: 100%;
+            height: 100%;
+            margin-left: auto;
+        }
+    }
+    @media screen and (min-width: $laptopL) {
+        margin-top: 0;
+        img {
+            width: 900px;
+        }
+        .gradientOverlay {
+            height: 300px;
+        }
+    }
+}

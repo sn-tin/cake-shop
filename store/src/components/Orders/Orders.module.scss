@@ -1,0 +1,136 @@
+@import '../../styles/variable';
+
+.orders {
+    width: 100vw;
+    background: #00000080;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 1000;
+    i {
+        cursor: pointer;
+    }
+}
+.ordersContainer {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    max-width: 40rem;
+    background-color: white;
+    float: right;
+    padding: 4rem 1rem;
+    position: relative;
+    margin-top: 40px;
+    z-index: 100000;
+    overflow-y: scroll;
+}
+.ordersHeader {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid $lines-color;
+    padding-bottom: 20px;
+    span {
+        font-size: clamp(1.2rem, 2.5vw, 1.563rem);
+        margin-left: 10px;
+    }
+}
+.ordersEmpty {
+    margin: 0 auto 50px;
+    text-align: center;
+    .fa-cart-shopping::before {
+        color: $light-gray;
+    }
+    img {
+        width: 300px;
+    }
+    p {
+        font-weight: 500;
+        font-size: clamp(1.2rem, 2.5vw, 1.563rem);
+    }
+    span {
+        color: $dark-gray;
+        font-size: clamp(1rem, 2.5vw, 1.25rem);
+        font-weight: 400;
+    }
+    button {
+        @include buttons($red);
+        width: 150px;
+        text-transform: uppercase;
+        font-weight: 500;
+        margin-top: 20px;
+    }
+}
+.orders-wrapper {
+    padding: 30px 0;
+}
+.order-content {
+    display: flex;
+    flex-direction: row;
+    &:not(:last-of-type) {
+        margin-bottom: 15px;
+    }
+}
+.order-img-wrapper {
+    margin: 0 20px 0 10px;
+    img {
+        width: 65px;
+        height: 90px;
+        object-fit: cover;
+        object-position: center;
+    }
+    @media screen and (min-width: $laptop) {
+        margin: 0 30px 0 20px;
+        img {
+            width: 130px;
+            height: 180px;
+        }
+    }
+}
+.cakeName-category {
+    h3 {
+        font-family: $bodyFont;
+        font-size: clamp(1rem, 2.5vw, 1.17rem);
+        font-weight: 600;
+        color: $red;
+        text-transform: uppercase;
+    }
+    p {
+        text-transform: capitalize;
+        font-size: clamp(0.9rem, 2.5vw, 0.5rem);
+        line-height: 2;
+    }
+}
+.order-price {
+    font-size: clamp(1rem, 2.5vw, 1.17rem);
+    font-weight: 600;
+    margin-left: auto;
+}
+.totalSummary {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid $lines-color;
+    padding-top: 20px;
+    margin-top: auto;
+    span {
+        font-size: clamp(1rem, 2.5vw, 1.25rem);
+        font-weight: 700;
+    }
+    span:nth-child(1) {
+        color: $red;
+        text-transform: uppercase;
+    }
+}
+.order__payment {
+    width: 100%;
+    font-weight: 700;
+    margin: 30px 0 20px auto;
+    @include buttons($red);
+}
+.quantity {
+    @include quantityBtn;
+    margin-top: 10px;
+    span {
+        font-size: clamp(0.7rem, 2.5vw, 0.9rem);
+    }
+}

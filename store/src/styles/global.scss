@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display&display=swap');
+@import '../styles/variable';
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-family: $bodyFont;
+    font-size: 16px;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: $headingFont;
+    font-weight: 400;
+}
+section {
+    width: 100%;
+    max-width: 1920px;
+    margin: auto;
+}
