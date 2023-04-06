@@ -1,0 +1,9 @@
+@import '../styles/variable';
+
+.confirmation {
+    margin: 100px auto;
+    text-align: center;
+    h1 {
+        font-weight: $bodyFont;
+    }
+}

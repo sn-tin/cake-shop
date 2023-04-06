@@ -1,6 +1,6 @@
 import React from 'react';
 import { useStateContext } from '../../context/StateContextProvider';
-import styles from '../Orders/Orders.module.scss';
+import styles from './Orders.module.scss';
 import EmptyState from './EmptyState';
 
 export default function Orders() {
