@@ -1,9 +1,36 @@
 @import '../styles/variable';
 
 .confirmation {
-    margin: 100px auto;
+    margin: 10rem auto;
+    padding: 20px;
     text-align: center;
     h1 {
-        font-weight: $bodyFont;
+        font-family: $bodyFont;
+        font-size: clamp(2rem, 2.5vw, 3rem);
+        font-weight: 700;
+        color: $black;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        span {
+            font-size: clamp(1.2rem, 2.5vw, 2.2rem);
+            font-weight: 400;
+            color: $black;
+            text-transform: none;
+        }
+    }
+    p {
+        font-size: clamp(0.8rem, 2.5vw, 1.2rem);
+        &:is(:last-of-type) {
+            margin: 20px 0;
+        }
+    }
+    a {
+        color: $red;
+    }
+    button {
+        @include buttons($red);
+    }
+    @media screen and (min-width: $laptop) {
+        padding: 50px;
     }
 }
