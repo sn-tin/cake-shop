@@ -1,5 +1,4 @@
 import styles from '../Hero/Hero.module.scss';
-// import image
 import slideImg1 from '../../assets/cake-header-1.jpeg';
 
 const Hero = () => {
