@@ -40,7 +40,7 @@ app.post("/checkout", async (req, res) => {
      const session = await stripe.checkout.sessions.create({
         line_items: lineItems,
         mode: "payment",
-        success_url: "http://localhost:3000/sucsess",
+        success_url: "http://localhost:3000/success",
         cancel_url: "http://localhost:3000/cancel"
      });
 
@@ -49,4 +49,4 @@ app.post("/checkout", async (req, res) => {
      }))
 });
 
-app.listen(3000, () => console.log("Running on port 3000"))
+app.listen(4000, () => console.log("Running on port 4000"))
