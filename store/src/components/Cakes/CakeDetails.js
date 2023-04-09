@@ -24,6 +24,7 @@ const CakeDetails = () => {
 
   const handleClickImage = (e) => {
     setCakeImage(e.target.id)
+    console.log(e.target.id)
   }
   return (
     <>

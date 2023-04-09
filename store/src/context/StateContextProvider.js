@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState } from 'react'
+import React, { createContext, useContext, useEffect, useState } from 'react'
 
 export const StateContext = createContext()
 
@@ -10,6 +10,12 @@ export default function StateContextProvider({children}) {
     const [cake, setCake] = useState(null)
     const [cartItems, setCartItems] = useState([])
     const [totalPrice, setTotalPrice] = useState(0)
+
+    useEffect(() => {
+      if(totalQty === 0) {
+        setTotalPrice(0)
+      }
+    },[totalQty])
     
     const handleNavMenu = () => {
         setIsNavOpen(!isNavOpen)
@@ -62,7 +68,7 @@ export default function StateContextProvider({children}) {
       if(button.toLowerCase() === "buy now"){
         handleCartClick()
       }
-      setTotalPrice(prevTotalPrice => prevTotalPrice + product.details.price * quantity)
+      setTotalPrice(prevTotalPrice => prevTotalPrice + (product.details.price * quantity))
       setTotalQty(prevTotalQuantities => prevTotalQuantities + quantity)
       setQuantity(1)
     }
@@ -70,7 +76,7 @@ export default function StateContextProvider({children}) {
     const handleRemoveCart = (cake) => {
       const deleteItem = cartItems.filter(item => item.index !== cake.index)
       setCartItems(deleteItem)
-      setTotalPrice(prevTotalPrice => prevTotalPrice - cake.quantity * cake.details.price)
+      setTotalPrice(prevTotalPrice => prevTotalPrice - (cake.quantity * cake.details.price))
       setTotalQty(prevTotalQuantities => prevTotalQuantities - cake.quantity)
     }
 

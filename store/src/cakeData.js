@@ -36,7 +36,7 @@ export const data = [
         category: "vintage",
         images: [crownPrincess1, crownPrincess2],
         details: {
-            price: 89.99,
+            price: 95,
             description: [
                 "Classic, simple, clean but nothing short of elegance and grace.", 
                 "Vintage cakes are all handpipped lace by lace, piece by piece made to into a masterpiece.",
@@ -53,7 +53,7 @@ export const data = [
         category: "vintage",
         images: [veraBear1, veraBear2],
         details: {
-            price: 89.99,
+            price: 95,
             description: [
                 "Classic, simple, clean but nothing short of elegance and grace.", 
                 "Vintage cakes are all handpipped lace by lace, piece by piece made to into a masterpiece.",
@@ -69,7 +69,7 @@ export const data = [
         category: "vintage",
         images: [romanceBerry1, romanceBerry2],
         details: {
-            price: 89.99,
+            price: 95,
             description: [
                 "Classic, simple, clean but nothing short of elegance and grace.", 
                 "Vintage cakes are all handpipped lace by lace, piece by piece made to into a masterpiece.",
@@ -85,7 +85,7 @@ export const data = [
         category: "vintage",
         images: [velvetGlow1, velvetGlow2],
         details: {
-            price: 89.99,
+            price: 95,
             description: [
                 "Classic, simple, clean but nothing short of elegance and grace.", 
                 "Vintage cakes are all handpipped lace by lace, piece by piece made to into a masterpiece.",
@@ -101,7 +101,7 @@ export const data = [
         category: "vintage",
         images: [rubyDuby1, rubyDuby2],
         details: {
-            price: 89.99,
+            price: 95,
             description: [
                 "Classic, simple, clean but nothing short of elegance and grace.", 
                 "Vintage cakes are all handpipped lace by lace, piece by piece made to into a masterpiece.",
@@ -117,7 +117,7 @@ export const data = [
         category: "wedding",
         images: [pearl1, pearl2],
         details: {
-            price: 250.00,
+            price: 250,
             description: [
                 "Cheers to the lovely couple, let's celebrate love with a breathtaking cake!",
                 "These bespoke cakes are suitable for a ROM, Wedding ceremony or even just a fancy party,",
@@ -133,7 +133,7 @@ export const data = [
         category: "wedding",
         images: [firstLove1, firstLove2],
         details: {
-            price: 250.00,
+            price: 250,
             description: [
                 "Cheers to the lovely couple, let's celebrate love with a breathtaking cake!",
                 "These bespoke cakes are suitable for a ROM, Wedding ceremony or even just a fancy party,",
@@ -149,7 +149,7 @@ export const data = [
         category: "wedding",
         images: [adore1, adore2],
         details: {
-            price: 250.00,
+            price: 250,
             description: [
                 "Cheers to the lovely couple, let's celebrate love with a breathtaking cake!",
                 "These bespoke cakes are suitable for a ROM, Wedding ceremony or even just a fancy party,",
@@ -165,7 +165,7 @@ export const data = [
         category: "wedding",
         images: [woaini1, woaini2],
         details: {
-            price: 250.00,
+            price: 250,
             description: [
                 "Cheers to the lovely couple, let's celebrate love with a breathtaking cake!",
                 "These bespoke cakes are suitable for a ROM, Wedding ceremony or even just a fancy party,",
@@ -181,7 +181,7 @@ export const data = [
         category: "wedding",
         images: [devoted1, devoted2],
         details: {
-            price: 250.00,
+            price: 250,
             description: [
                 "Cheers to the lovely couple, let's celebrate love with a breathtaking cake!",
                 "These bespoke cakes are suitable for a ROM, Wedding ceremony or even just a fancy party,",
@@ -197,7 +197,7 @@ export const data = [
         category: "wedding",
         images: [everlasting1, everlasting2],
         details: {
-            price: 250.00,
+            price: 250,
             description: [
                 "Cheers to the lovely couple, let's celebrate love with a breathtaking cake!",
                 "These bespoke cakes are suitable for a ROM, Wedding ceremony or even just a fancy party,",
@@ -213,7 +213,7 @@ export const data = [
         category: "monogram",
         images: [minis1, minis2],
         details: {
-            price: 199.99,
+            price: 200,
             description: [
                 "This monogram cake will be best for a small, but nonetheless special celebration!",
                 "Ideal for anyone looking for a monogram cake with 2 mini letters/numbers.",
@@ -229,7 +229,7 @@ export const data = [
         category: "monogram",
         images: [floral1, floral2],
         details: {
-            price: 199.99,
+            price: 200,
             description: [
                 "This monogram cake will be best for a small, but nonetheless special celebration!",
                 "Ideal for anyone looking for a monogram cake with 2 mini letters/numbers.",
@@ -245,7 +245,7 @@ export const data = [
         category: "monogram",
         images: [oceans1, oceans2],
         details: {
-            price: 199.99,
+            price: 200,
             description: [
                 "This monogram cake will be best for a small, but nonetheless special celebration!",
                 "Ideal for anyone looking for a monogram cake with 2 mini letters/numbers.",

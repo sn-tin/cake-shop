@@ -60,7 +60,12 @@ span.activeCategory {
 }
 .cakeImage {
     width: 100%;
-    max-width: 460px;
+    overflow: hidden;
+    div {
+        width: 100%;
+        max-width: 460px;
+        height: 460px;
+    }
 }
 .cakeDetails {
     padding: 10px 0 0;
