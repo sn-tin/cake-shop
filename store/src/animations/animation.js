@@ -30,6 +30,9 @@ const fadeInUp = {
             duration: 1
         }
     },
+    exit: {
+        opacity: 0
+    }
 }
 
 const imageZoomHover = {

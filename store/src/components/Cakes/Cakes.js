@@ -37,8 +37,10 @@ const CakeList = () => {
                 </div>
                 <div className={styles.dividerLine}></div>
                 <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 1, md: 3 }}>
+                    <AnimatePresence>
                     { cakes.map((cake, index) => (
                         <Grid key={index} item xs={6} md={4} mb={5}>
+                            <motion.div key={index} variants={easeAnimate} initial="start" animate="end" exit="exit">
                                 <Link to={`/cakes/${cake.slug}`} className={styles.cardLink} onClick={scrollToTop}>
                                     <div className={styles.cakeImage}>
                                         <motion.img src={cake.images[0]} alt="cake" variants={imageZoomHover} initial="start" whileHover="end"/>
@@ -48,8 +50,10 @@ const CakeList = () => {
                                         <p className={styles.cakePrice}>${formatPrice(cake.details.price)}</p>
                                     </div>
                                 </Link>
+                        </motion.div>
                         </Grid>
                     )) }
+                    </AnimatePresence>
                 </Grid>
             </div>
         </section>
