@@ -5,7 +5,7 @@ import data from "../../cakeData"
 import { useStateContext } from "../../context/StateContextProvider"
 import styles from "./Cakes.module.scss"
 import { AnimatePresence, motion } from "framer-motion"
-import { easeAnimate, fadeInUp, imageZoomHover } from "../../animations/animation"
+import { easeAnimate, imageZoomHover } from "../../animations/animation"
 
 const CakeList = () => {
     const { formatPrice, scrollToTop } = useStateContext();
