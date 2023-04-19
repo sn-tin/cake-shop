@@ -63,9 +63,9 @@ export const data = [
     },
     {
         index: 2,
-        price_id: "price_1MtAxTGZRtKSKH8eNEHpzDgD",
-        cakeName: "Romance Bear",
-        slug: "romance-bear",
+        price_id: "price_1MyYXSGZRtKSKH8eDndNmLVP",
+        cakeName: "Romance Berry",
+        slug: "romance-berry",
         category: "vintage",
         images: [romanceBerry1, romanceBerry2],
         details: {
@@ -95,7 +95,7 @@ export const data = [
     },
     {
         index: 4,
-        price_id: "price_1MtAxvGZRtKSKH8ewNewnL8S",
+        price_id: "price_1MyYYPGZRtKSKH8eMT9iyUIu",
         cakeName: "Ruby Duby",
         slug: "ruby-duby",
         category: "vintage",
@@ -207,7 +207,7 @@ export const data = [
     },
     {
         index: 11,
-        price_id: "price_1MtB23GZRtKSKH8eVkxrP0TY",
+        price_id: "price_1MyYZNGZRtKSKH8ehKXOSWe8",
         cakeName: "Minis Monogram Cookie",
         slug: "minis-monogram-cookie",
         category: "monogram",

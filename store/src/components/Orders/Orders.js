@@ -49,7 +49,7 @@ export default function Orders() {
                     <i className="fa-solid fa-plus fa-xs" onClick={() => cartItemQty("inc", cake.index)}></i>
                   </div>
                 </div>
-                <p className={styles["order-price"]}>{formatPrice(cake.details.price)}</p>
+                <p className={styles["order-price"]}>${formatPrice(cake.details.price)}</p>
               </div>
             ))
           )
