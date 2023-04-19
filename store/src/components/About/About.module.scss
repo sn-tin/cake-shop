@@ -1,0 +1,28 @@
+@import '../../styles/variable';
+
+.about {
+    width: 100%;
+    max-width: 1500px;
+    margin: 100px auto;
+    padding: 0 12px;
+    text-align: center;
+    @media screen and (min-width: $laptop) {
+        padding: 20px 50px;
+    }
+    h2 {
+        font-size: clamp(1rem, 2.5vw, 2rem);
+        font-family: $bodyFont;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+    }
+    a {
+        color: $red;
+        text-decoration: none;
+        font-weight: 500;
+    }
+    p {
+        width: 70%;
+        margin: auto;
+    }
+}
