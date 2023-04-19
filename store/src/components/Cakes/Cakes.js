@@ -35,25 +35,19 @@ const CakeList = () => {
                 <div className={styles.cakeCategory}>
                     { categoryList.map((category, index) =>  <span key={index} className={cakeCategory === category ? `${styles.activeCategory}` : null } onClick={handleCakecCategory}>{category}</span> ) }
                 </div>
-                <div className={styles.dividerLine}><div></div></div>
+                <div className={styles.dividerLine}></div>
                 <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 1, md: 3 }}>
                     { cakes.map((cake, index) => (
                         <Grid key={index} item xs={6} md={4} mb={5}>
-                            <motion.div variants={easeAnimate} initial="start" whileInView="end" viewport={{ once: true, amount: 0.8 }}>
                                 <Link to={`/cakes/${cake.slug}`} className={styles.cardLink} onClick={scrollToTop}>
                                     <div className={styles.cakeImage}>
-                                        <motion.div variants={imageZoomHover} initial="start" whileHover="end" style={{
-                                            backgroundImage: `url(${cake.images[0]})`,
-                                            backgroundSize: "contain",
-                                            backgroundRepeat: "no-repeat"
-                                        }}></motion.div>
+                                        <motion.img src={cake.images[0]} alt="cake" variants={imageZoomHover} initial="start" whileHover="end"/>
                                     </div>
                                     <div className={styles.cakeDetails}>
                                         <p className={styles.cakeName}>{cake.cakeName}</p>
                                         <p className={styles.cakePrice}>${formatPrice(cake.details.price)}</p>
                                     </div>
                                 </Link>
-                            </motion.div> 
                         </Grid>
                     )) }
                 </Grid>
