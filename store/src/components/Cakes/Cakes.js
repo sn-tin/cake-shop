@@ -5,7 +5,7 @@ import data from "../../cakeData"
 import { useStateContext } from "../../context/StateContextProvider"
 import styles from "./Cakes.module.scss"
 import { AnimatePresence, motion } from "framer-motion"
-import { easeAnimate, imageZoomHover } from "../../animations/animation"
+import { easeAnimate } from "../../animations/animation"
 
 const CakeList = () => {
     const { formatPrice, scrollToTop } = useStateContext();
@@ -43,14 +43,14 @@ const CakeList = () => {
                             <motion.div key={index} variants={easeAnimate} initial="start" animate="end" exit="exit">
                                 <Link to={`/cakes/${cake.slug}`} className={styles.cardLink} onClick={scrollToTop}>
                                     <div className={styles.cakeImage}>
-                                        <motion.img src={cake.images[0]} alt="cake" variants={imageZoomHover} initial="start" whileHover="end"/>
+                                        <img src={cake.images[0]} alt={`${cake.cakeName} display`}/>
                                     </div>
                                     <div className={styles.cakeDetails}>
                                         <p className={styles.cakeName}>{cake.cakeName}</p>
                                         <p className={styles.cakePrice}>${formatPrice(cake.details.price)}</p>
                                     </div>
                                 </Link>
-                        </motion.div>
+                            </motion.div>
                         </Grid>
                     )) }
                     </AnimatePresence>

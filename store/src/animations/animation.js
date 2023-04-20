@@ -35,16 +35,4 @@ const fadeInUp = {
     }
 }
 
-const imageZoomHover = {
-    start: {
-        transform: "scale(1)"
-    },
-    end: {
-        transform: "scale(1.1)",
-        transition: {
-            duration: 0.3
-        }
-    }
-}
-
-export { easeAnimate, fadeInUp, imageZoomHover }
+export { easeAnimate, fadeInUp }

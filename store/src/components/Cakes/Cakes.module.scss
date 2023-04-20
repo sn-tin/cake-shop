@@ -70,6 +70,10 @@ span.activeCategory {
         max-width: 460px;
         height: 100%;
     }
+    &:hover > img {
+        transform: scale(1.1);
+        transition: transform ease-in-out 0.2s;
+    }
 }
 .cakeDetails {
     padding: 10px 0 0;
