@@ -4,34 +4,24 @@ import styles from '../Navbar/Navbar.module.scss';
 
 
 const Navbar = () => {
-    const { handleCartClick, isNavOpen, handleNavMenu, totalQty } = useStateContext()
+    const { handleCartClick, isNavOpen, handleNavLinks, handleNavMenu, totalQty } = useStateContext()
 
-    const handleClick = (anchor) => () => {
-        const id = `${anchor}-section`;
-        const element = document.getElementById(id);
-        if (element) {
-          element.scrollIntoView({
-            behavior: "smooth",
-            block: "start",
-          });
-        };
-    }
     return (
         <nav className={styles.navbar}>
             <section className={styles.navWrapper}>
                 <div className={styles.rightLinks}>
-                    <NavLink to="/#cakes" onClick={handleClick("cakes")}>Cakes</NavLink>
+                    <NavLink to="/#cakes" onClick={handleNavLinks("cakes")}>Cakes</NavLink>
                     <NavLink to='/about'>About</NavLink>
-                    <NavLink to="#contact" onClick={handleClick("contact")}>Contact</NavLink>
+                    <NavLink to="#contact" onClick={handleNavLinks("contact")}>Contact</NavLink>
                 </div>
                 <div className={styles.navMenu} onClick={handleNavMenu}>
                     <span></span>
                     <span></span>
                 </div>
                 <div style={{display: isNavOpen ? "block" : "none"}} className={styles.navMenuList}>
-                    <NavLink to="/#cakes" onClick={handleClick("cakes")}>Cakes</NavLink>
-                    <NavLink to="/about">About</NavLink>
-                    <a href="#contact" onClick={handleClick("contact")}>Contact</a>
+                    <NavLink to="/#cakes" onClick={handleNavLinks("cakes")}>Cakes</NavLink>
+                    <NavLink to="/about" onClick={handleNavLinks("about")}>About</NavLink>
+                    <a href="#contact" onClick={handleNavLinks("contact")}>Contact</a>
                     <div>Login</div>
                     <button>Register</button>
                 </div>

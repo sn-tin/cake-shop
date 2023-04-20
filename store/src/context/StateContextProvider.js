@@ -21,6 +21,18 @@ export default function StateContextProvider({children}) {
     const handleNavMenu = () => {
         setIsNavOpen(!isNavOpen)
     }
+
+    const handleNavLinks = (anchor) => () => {
+      const id = `${anchor}-section`;
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      };
+      setIsNavOpen(false)
+  }
     
     const displayCakeDetails = (item) => {
       setCake(item)
@@ -140,6 +152,7 @@ export default function StateContextProvider({children}) {
     <StateContext.Provider value={{
         isNavOpen,
         handleNavMenu,
+        handleNavLinks,
         cartItems, 
         updateCart,
         addToCart,
