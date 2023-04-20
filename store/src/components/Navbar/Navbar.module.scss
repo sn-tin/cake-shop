@@ -78,6 +78,11 @@
 }
 .rightLinks {
     display: none;
+    a {
+        &:hover {
+            color: $red;
+        }
+    }
     @media screen and (min-width: $laptop) {
         display: flex;
         gap: 27px;
@@ -99,6 +104,10 @@
 .leftLinks {
     .login, .register {
         display: none;
+        cursor: pointer;
+        &:hover {
+            color: $red;
+        }
     }
     @media screen and (min-width: $laptop) {
         display: flex;
