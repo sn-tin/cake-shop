@@ -1,7 +1,7 @@
 # 👩‍💻 Work in Progress: Cake Shop
 An e-commerce shop for cakes and desserts
 
-![Design preview for Cake Shop #1](src/assets/Cake-Shop-1.jpg)
+![Design preview for Cake Shop #1](src/assets/cakeit-landing.jpg)
 
 ## 📖 Table of contents
   - [Overview](#overview)
@@ -25,7 +25,7 @@ Users should be able to:
 
 ### Screenshot 📸
 
-![Design preview for Cake Shop #2](src/assets/Cake-Shop-2.jpg)
+![Design preview for Cake Shop #2](src/assets/cakeit-product.jpg)
 
 ### Built with 🔨
 
