@@ -22,9 +22,9 @@ const CakeDetails = () => {
 
   const [cakeImage, setCakeImage] = useState(0)
 
-  const handleClickImage = (e) => {
-    setCakeImage(e.target.id)
-    console.log(e.target.id)
+  const handleClickImage = (id) => {
+    setCakeImage(id)
+    console.log(id)
   }
   return (
     <>
@@ -38,20 +38,20 @@ const CakeDetails = () => {
                 <img id={cakeImage} src={cake.images[cakeImage]} alt={`Reference photos for ${cake.cakeName}`}/>
               </div>
               <div className={styles.cakeImageReferences}>
-                {
-                  cake.images?.map(img => {
-                    return (
-                      <img 
-                        key={cake.images.indexOf(img)}
-                        id={cake.images.indexOf(img)} 
-                        style={{border: cakeImage === cake.images.indexOf(img) ? `2px solid #BA4D4A` : "none"}} 
-                        src={img} 
-                        alt={`Additional reference photos`}
-                        onClick={handleClickImage}
-                      />
-                    )
-                  })
-                }
+                <img 
+                  id={cake.index}
+                  className={cakeImage === 0 ? styles.activeImage : undefined}
+                  src={cake.images[0]} 
+                  alt={`Additional reference photos`}
+                  onClick={() => handleClickImage(0)}
+                />
+                <img 
+                  id={cake.index}
+                  className={cakeImage === 1 ? styles.activeImage : undefined}
+                  src={cake.images[1]} 
+                  alt={`Additional reference photos`}
+                  onClick={() => handleClickImage(1)}
+                />
               </div>
             </div>
             <div>

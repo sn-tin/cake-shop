@@ -181,6 +181,9 @@ span.activeCategory {
         cursor: pointer;
     }
 }
+.activeImage {
+    border: 2px solid #BA4D4A;
+}
 .quantityCount {
     display: flex;
     flex-direction: row;
