@@ -8,7 +8,7 @@ import { AnimatePresence, motion } from "framer-motion"
 import { easeAnimate } from "../../animations/animation"
 
 const CakeList = () => {
-    const { formatPrice, scrollToTop } = useStateContext();
+    const { formatPrice, scrollToTop, cakeRef } = useStateContext();
     const [cakes, setCakes] = useState(data);
     const categoryList = ["All", "Wedding", "Vintage", "Monogram"]
     const [cakeCategory, setcakeCategory] = useState("All");
@@ -29,7 +29,7 @@ const CakeList = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [cakeCategory])
     return (
-        <section id="cakes-section" className={styles.cakesMenu}>
+        <section ref={cakeRef} id="cakes-section" className={styles.cakesMenu}>
             <div className={styles.cakesWrapper}>
                 <h2>Our Cakes</h2>
                 <div className={styles.cakeCategory}>

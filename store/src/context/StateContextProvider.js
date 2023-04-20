@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useEffect, useState } from 'react'
+import React, { createContext, useContext, useEffect, useRef, useState } from 'react'
 
 export const StateContext = createContext()
 
@@ -10,6 +10,7 @@ export default function StateContextProvider({children}) {
     const [cake, setCake] = useState(null)
     const [cartItems, setCartItems] = useState([])
     const [totalPrice, setTotalPrice] = useState(0)
+    const cakeRef = useRef();
 
     useEffect(() => {
       if(totalQty === 0) {
@@ -130,6 +131,11 @@ export default function StateContextProvider({children}) {
     }
     
     const formatPrice = (value) => value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+
+    const handleScrollToProducts = () => {
+      cakeRef.current?.scrollIntoView({behavior: 'smooth'});
+      setShowCart(false)
+    }
   return (
     <StateContext.Provider value={{
         isNavOpen,
@@ -150,6 +156,8 @@ export default function StateContextProvider({children}) {
         showCart,
         handleCartClick,
         formatPrice,
+        cakeRef,
+        handleScrollToProducts
     }}>
         {children}
     </StateContext.Provider>
