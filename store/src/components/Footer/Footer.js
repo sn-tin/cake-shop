@@ -21,9 +21,9 @@ const Footer = () => {
             <div className={styles.footerContent}>
                 <h3>Contact Us</h3>
                 <div>
-                    <p>Cake It, 9th St,<br/>Bacoor, 4102 Cavite</p>
-                    <p>8123-4567</p>
-                    <p>cakeshop@gmail.com</p>
+                    <p>	316 N Franklin St, Hempstead,<br/>North Dakota, 11550</p>
+                    <p>(888) 433-4780</p>
+                    <p>cakeit@gmail.com</p>
                     <p><strong>Operating Hours:</strong><br/>Mon - Sun 10:30am - 6pm<br/>Tuesday: Closed</p>
                 </div>
             </div>
