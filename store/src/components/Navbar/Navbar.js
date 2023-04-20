@@ -14,10 +14,14 @@ const Navbar = () => {
                     <NavLink to='/about'>About</NavLink>
                     <NavLink to="#contact" onClick={handleNavLinks("contact")}>Contact</NavLink>
                 </div>
-                <div className={styles.navMenu} onClick={handleNavMenu}>
-                    <span></span>
-                    <span></span>
-                </div>
+                {
+                    isNavOpen ? 
+                    <i className="fa-solid fa-x" onClick={handleNavMenu}></i> :
+                    <div className={styles.navMenu} onClick={handleNavMenu}>
+                        <span></span>
+                        <span></span>
+                    </div>
+                }
                 <div style={{display: isNavOpen ? "block" : "none"}} className={styles.navMenuList}>
                     <NavLink to="/#cakes" onClick={handleNavLinks("cakes")}>Cakes</NavLink>
                     <NavLink to="/about" onClick={handleNavLinks("about")}>About</NavLink>
