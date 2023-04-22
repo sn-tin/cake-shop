@@ -1,7 +1,7 @@
 # Cake It (Cake Shop E-Commerce)
 An e-commerce shop for cakes and desserts
 
-![Design preview for Cake Shop #1](src/assets/cakeit-landing.jpg)
+![Design preview for Cake Shop #1](./store/src/assets/cakeit-landing.jpg)
 
 ## 📖 Table of contents
   - [Overview](#overview)
@@ -25,7 +25,7 @@ Users should be able to:
 
 ### Screenshot 📸
 
-![Design preview for Cake Shop #2](src/assets/cakeit-product.jpg)
+![Design preview for Cake Shop #2](./store/src/assets/cakeit-product.jpg)
 
 ### Built with 🔨
 
