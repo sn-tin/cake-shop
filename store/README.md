@@ -46,7 +46,7 @@ npm install
 ### Links 🔗
 
 - Solution URL: https://github.com/sn-tin/cake-shop
-- Live Site URL: https://rest-countries-sn-tin.vercel.app/
+- Live Site URL: https://cakeit-shop.vercel.app/
 
 ## 👩‍💻 Author
 
