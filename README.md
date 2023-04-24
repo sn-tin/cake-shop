@@ -1,6 +1,8 @@
 # Cake It (Cake Shop E-Commerce)
 An e-commerce shop for cakes and desserts
 
+## TO FIX: Stripe payment integration
+
 ![Design preview for Cake Shop #1](./store/src/assets/cakeit-landing.jpg)
 
 ## 📖 Table of contents
