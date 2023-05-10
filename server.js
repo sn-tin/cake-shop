@@ -1,5 +1,4 @@
 const express = require("express");
-const path = require(path);
 let cors = require("cors")
 const stripe = require("stripe")("sk_test_51MtAaYGZRtKSKH8eLRMzqnzlbPSmvOoFWPmW8OWG1FdfUGFINIygYZCzZbNyIQ6K4PCFFa15Pps4IsL69zAUdzEe005T3woqjf")
 
@@ -24,8 +23,8 @@ app.post("/checkout", async (req, res) => {
      const session = await stripe.checkout.sessions.create({
         line_items: lineItems,
         mode: "payment",
-        success_url: `${req.protocol}://${req.get("host")}/success`,
-        cancel_url: `${req.protocol}://${req.get("host")}/cancel`,
+        success_url: "https://cakeit-shop.vercel.app/success",
+        cancel_url: "https://cakeit-shop.vercel.app/cancel"
      });
 
      res.send(JSON.stringify({
