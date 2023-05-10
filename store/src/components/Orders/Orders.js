@@ -7,7 +7,7 @@ export default function Orders() {
   const { cartItems, handleRemoveCart, handleCartClick, totalPrice, cartItemQty, totalQty, formatPrice } = useStateContext()
 
   const checkout = async () => {
-    await fetch('http://localhost:4000/checkout', {
+    await fetch('/checkout', {
         method: "POST",
         headers: {
             'Content-Type': 'application/json'
