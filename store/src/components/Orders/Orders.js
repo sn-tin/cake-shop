@@ -7,7 +7,7 @@ export default function Orders() {
   const { cartItems, handleRemoveCart, handleCartClick, totalPrice, cartItemQty, totalQty, formatPrice } = useStateContext()
 
   const checkout = async () => {
-    await fetch('/checkout', {
+    await fetch('https://cakeit-shop.vercel.app/checkout', {
         method: "POST",
         headers: {
             'Content-Type': 'application/json'
